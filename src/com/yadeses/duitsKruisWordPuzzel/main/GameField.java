@@ -1,13 +1,9 @@
 package com.yadeses.duitsKruisWordPuzzel.main;
 
-import java.awt.Toolkit;
-
 import javax.swing.JTable;
 import javax.swing.JTextArea;
+import javax.swing.table.AbstractTableModel;
 import javax.swing.text.AbstractDocument;
-import javax.swing.text.AttributeSet;
-import javax.swing.text.BadLocationException;
-import javax.swing.text.DocumentFilter;
 
 public class GameField extends JTable {
 
@@ -16,7 +12,7 @@ public class GameField extends JTable {
 	static Object[] junk = new Object[20];
 
 	public GameField() {
-		super(initHelp(), junk);
+		super(new MyTableModel(initHelp()));
 		setTableHeader(null);
 	}
 
@@ -27,8 +23,39 @@ public class GameField extends JTable {
 				((AbstractDocument) ((JTextArea) cells[i][j]).getDocument())
 						.setDocumentFilter(new SizeDocumentFilter());
 			}
-			junk[i] = "";
 		}
 		return cells;
 	}
+	
+}
+
+class MyTableModel extends AbstractTableModel {
+	
+	private static final long serialVersionUID = 1L;
+	
+	String[] colNames;
+	Object[][] data;
+	
+	public MyTableModel(Object[][] obj){
+		data = obj;
+		for(int i = 0; i < obj[0].length; i++) {
+			colNames[i] = "";
+		}
+	}
+	
+	@Override
+	public int getRowCount() {
+		return data.length;
+	}
+
+	@Override
+	public int getColumnCount() {
+		return colNames.length;
+	}
+
+	@Override
+	public Object getValueAt(int row, int col) {
+		return data[row][col];
+	}
+	
 }
