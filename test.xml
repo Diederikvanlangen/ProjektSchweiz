@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<woorden>
+    <!-- moeilijkheid graad is id (1 <= id <= 5) -->
+    <woord id="1" naam="Schweiz">Ein neutrales Land in Europa</woord>
+</woorden>
