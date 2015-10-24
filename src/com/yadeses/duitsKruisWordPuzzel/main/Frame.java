@@ -65,6 +65,7 @@ public class Frame extends JFrame implements ActionListener {
 				getal = "Schlüsselwort";
 			JLabel o = new JLabel(getal);
 			add(o, c);
+			System.out.println(gameFormat.get(i));
 			for (int j = 0; j < ((char[]) gameFormat.get(i)).length; j++) {
 				c.gridx = j + 1;
 				ImageIcon imageIcon = new ImageIcon(
@@ -120,8 +121,12 @@ public class Frame extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getActionCommand() == "Erklärung") {
+		if (e.getActionCommand().equals("Erklärung")) {
 			showErklärung();
+		}
+		
+		if (e.getActionCommand().equals("Kontrollieren")) {
+			System.out.println(checkAnswer());
 		}
 
 	}
@@ -141,5 +146,17 @@ public class Frame extends JFrame implements ActionListener {
 	public void showError() {
 		JOptionPane.showMessageDialog(null, "Fehler! Bitte, starte die Applikation neu.", "Applikationfehler",
 				JOptionPane.PLAIN_MESSAGE);
+	}
+	
+	private boolean checkAnswer() {
+		for(int i = 0; i < gameFormat.size(); i++) {
+			for(int j = 0; j < gameFormat.get(i).length; j++) {
+				if(!(String.valueOf(gameFormat.get(i)[j]).equals(cells[i][j].getText()))) {
+					return false;
+				}
+			}
+		}
+		return true;
+		
 	}
 }
