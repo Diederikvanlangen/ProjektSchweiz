@@ -18,9 +18,9 @@ import org.w3c.dom.NodeList;
 public class App {
 
 	public static void main(String[] args) {
-		
+
 		Frame mainFrame = new Frame();
-		
+
 	}
 
 	public static LinkedList<HashMap<String, String>> readXML(String fileName) {
@@ -43,7 +43,6 @@ public class App {
 					Element word = (Element) nNode;
 					words.get(Integer.parseInt(word.getAttribute("id")) - 1).put(word.getAttribute("naam"),
 							word.getTextContent());
-					System.out.println(word.getAttribute("naam"));
 				}
 			}
 
@@ -63,7 +62,6 @@ public class App {
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
 		data2.get(4).remove(randomKey);
-		game.add(randomKey);
 
 		char[] keyChars = randomKey.toCharArray();
 
@@ -93,11 +91,14 @@ public class App {
 		while (game.size() < 13) {
 			HashMap<String, String> n = data2.get(random.nextInt(4));
 			List<String> keys2 = new ArrayList<String>(n.keySet());
-			String randomKey2 = keys2.get(random.nextInt(keys2.size()));
-			n.remove(randomKey2);
-			game.add(randomKey2.toCharArray());
+			if (keys2.size() > 0) {
+				String randomKey2 = keys2.get(random.nextInt(keys2.size()));
+				n.remove(randomKey2);
+				game.add(randomKey2.toCharArray());
+			}
 		}
-
+		game.add(randomKey.toCharArray());
+		
 		return game;
 	}
 
@@ -109,7 +110,6 @@ public class App {
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
 		data2.get(4).remove(randomKey);
-		game.add(randomKey);
 
 		char[] keyChars = randomKey.toCharArray();
 
@@ -135,10 +135,14 @@ public class App {
 		while (game.size() < 13) {
 			HashMap<String, String> n = data2.get(random.nextInt(4));
 			List<String> keys2 = new ArrayList<String>(n.keySet());
-			String randomKey2 = keys2.get(random.nextInt(keys2.size()));
-			n.remove(randomKey2);
-			game.add(randomKey2);
+			if (keys2.size() > 0) {
+				String randomKey2 = keys2.get(random.nextInt(keys2.size()));
+				n.remove(randomKey2);
+				game.add(randomKey2.toCharArray());
+			}
 		}
+		game.add(randomKey.toCharArray());
+		
 		return game;
 	}
 

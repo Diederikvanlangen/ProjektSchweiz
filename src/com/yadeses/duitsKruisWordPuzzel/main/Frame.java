@@ -7,6 +7,8 @@ import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -26,9 +28,9 @@ public class Frame extends JFrame implements ActionListener {
 	public Frame() {
 		super("Puzzle");
 		
-		/*CharNumComb comb = new CharNumComb();
+		CharNumComb comb = new CharNumComb();
 		LinkedList<HashMap<String,String>> Words = App.readXML("test.xml");
-		gameFormat = App.genGame(Words);*/
+		gameFormat = App.genGame(Words);
 
 		setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
@@ -58,7 +60,8 @@ public class Frame extends JFrame implements ActionListener {
 				getal = "Schlüsselwort";
 			JLabel o = new JLabel(getal);
 			add(o, c);
-			for (int j = 0; j < 20; j++) {
+			System.out.println(i + " " + gameFormat);
+			for (int j = 0; j < ((char[])gameFormat.get(i)).length; j++) {
 				c.gridx = j + 1;
 				ImageIcon imageIcon = new ImageIcon("Recources/1.gif");
 				cells[i][j] = new JTextField() {
