@@ -1,4 +1,4 @@
-package com.yadeses.duitsKruisWordPuzzel.ma
+package com.yadeses.duitsKruisWordPuzzel.main;
 
 public class Game {
 		
