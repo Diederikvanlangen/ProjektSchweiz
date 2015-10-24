@@ -30,6 +30,10 @@ public class Frame extends JFrame implements ActionListener {
 		
 		CharNumComb comb = new CharNumComb();
 		LinkedList<HashMap<String,String>> Words = App.readXML("test.xml");
+		HashMap<String,String> hashmap = new HashMap<String,String>();
+		for(int i=0;i<Words.size();i++){
+			hashmap.putAll(Words.get(i));
+		}
 		gameFormat = App.genGame(Words);
 
 		setLayout(new GridBagLayout());
@@ -91,7 +95,7 @@ public class Frame extends JFrame implements ActionListener {
 
 		for (int i = 0; i < 12; i++) {
 			String getal = "" + (i + 1);
-			JLabel omschrijving = new JLabel(getal + ". ");
+			JLabel omschrijving = new JLabel(getal + ". " + hashmap.get(String.valueOf(gameFormat.get(i))));
 			c.gridwidth = 1;
 			c.gridx = 0;
 			c.gridy = i + 1;
@@ -99,7 +103,7 @@ public class Frame extends JFrame implements ActionListener {
 			add(omschrijving, c);
 		}
 		setResizable(false);
-		setSize(900, 900);
+		setSize(600, 900);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setJMenuBar(bar);
 		setVisible(true);
