@@ -25,11 +25,11 @@ public class Frame extends JFrame implements ActionListener {
 
 	public Frame() {
 		super("Puzzle");
-		XMLFormatReader xml = new XMLFormatReader();
+		
 		List<Map<String, String>> Words = new ArrayList<Map<String, String>>(5);
 
 
-		Words = xml.readXML("test.xml");		
+				
 
 		setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
