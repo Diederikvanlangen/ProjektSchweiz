@@ -18,8 +18,11 @@ import org.w3c.dom.NodeList;
 public class App {
 
 	public static void main(String[] args) {
-
+		
+		System.out.println(new charNumComb().combination);
 		Frame mainFrame = new Frame();
+		
+		
 	}
 
 	public static List<Map<String, String>> readXML(String fileName) {
