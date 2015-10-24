@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.awt.GridBagLayout;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -29,7 +30,7 @@ public class Frame extends JFrame implements ActionListener {
 		super("Puzzle");
 		
 		CharNumComb comb = new CharNumComb();
-		ArrayList<HashMap<String,String>> Words = App.readXML("test.xml");
+		LinkedList<HashMap<String,String>> Words = App.readXML("test.xml");
 		gameFormat = App.genGame(Words);
 
 		setLayout(new GridBagLayout());
