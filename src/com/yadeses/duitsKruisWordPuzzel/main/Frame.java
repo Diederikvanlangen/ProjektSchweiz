@@ -23,7 +23,7 @@ import javax.swing.text.Document;
 public class Frame extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
-	ArrayList<Object> gameFormat;
+	ArrayList<char[]> gameFormat;
 	
 	public Frame() {
 		super("Puzzle");
@@ -60,7 +60,7 @@ public class Frame extends JFrame implements ActionListener {
 				getal = "Schlüsselwort";
 			JLabel o = new JLabel(getal);
 			add(o, c);
-			System.out.println(i + " " + gameFormat);
+			System.out.println(i + " " + new String((char[])gameFormat.get(i)));
 			for (int j = 0; j < ((char[])gameFormat.get(i)).length; j++) {
 				c.gridx = j + 1;
 				ImageIcon imageIcon = new ImageIcon("Recources/1.gif");
