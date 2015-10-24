@@ -60,7 +60,8 @@ public class Frame extends JFrame implements ActionListener {
 				getal = "Schlüsselwort";
 			JLabel o = new JLabel(getal);
 			add(o, c);
-			for (int j = 0; j < 20; j++) {
+			System.out.println(i + " " + gameFormat);
+			for (int j = 0; j < ((char[])gameFormat.get(i)).length; j++) {
 				c.gridx = j + 1;
 				ImageIcon imageIcon = new ImageIcon("Recources/1.gif");
 				cells[i][j] = new JTextField() {

@@ -62,7 +62,6 @@ public class App {
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
 		data2.get(4).remove(randomKey);
-		game.add(randomKey);
 
 		char[] keyChars = randomKey.toCharArray();
 
@@ -98,7 +97,8 @@ public class App {
 				game.add(randomKey2.toCharArray());
 			}
 		}
-
+		game.add(randomKey.toCharArray());
+		
 		return game;
 	}
 
@@ -110,7 +110,6 @@ public class App {
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
 		data2.get(4).remove(randomKey);
-		game.add(randomKey);
 
 		char[] keyChars = randomKey.toCharArray();
 
@@ -142,6 +141,8 @@ public class App {
 				game.add(randomKey2.toCharArray());
 			}
 		}
+		game.add(randomKey.toCharArray());
+		
 		return game;
 	}
 
