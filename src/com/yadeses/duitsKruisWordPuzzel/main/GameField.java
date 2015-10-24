@@ -15,9 +15,10 @@ public class GameField extends JTable {
 	static Object[][] cells = new Object[20][20];
 	static Object[] junk = new Object[20];
 
-	public GameField() {
+	public GameField() {		
 		super(initHelp(), junk);
 		setTableHeader(null);
+		
 	}
 
 	private static Object[][] initHelp() {
