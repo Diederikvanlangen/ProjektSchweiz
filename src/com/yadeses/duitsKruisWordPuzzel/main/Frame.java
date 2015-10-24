@@ -30,6 +30,9 @@ public class Frame extends JFrame implements ActionListener {
 		super("Puzzle");
 
 		CharNumComb comb = new CharNumComb();
+		for(int i = 0; i < comb.combination.size(); i++) {
+			System.out.println(i + ": " + comb.combination.get(i));
+		}
 		LinkedList<HashMap<String, String>> Words = App.readXML("test.xml");
 		HashMap<String, String> hashmap = new HashMap<String, String>();
 
@@ -70,7 +73,7 @@ public class Frame extends JFrame implements ActionListener {
 			for (int j = 0; j < ((char[]) gameFormat.get(i)).length; j++) {
 				c.gridx = j + 1;
 				ImageIcon imageIcon = new ImageIcon(
-						"Recources/" + comb.combination.indexOf(((char[]) gameFormat.get(i))[j]) + ".gif");
+						"Recources/" + (comb.combination.indexOf(((char[]) gameFormat.get(i))[j]) + 1) + ".gif");
 				cells[i][j] = new JTextField() {
 					private static final long serialVersionUID = 1L;
 					Image image = imageIcon.getImage();
@@ -152,7 +155,7 @@ public class Frame extends JFrame implements ActionListener {
 	private boolean checkAnswer() {
 		for(int i = 0; i < gameFormat.size(); i++) {
 			for(int j = 0; j < gameFormat.get(i).length; j++) {
-				if(!(String.valueOf(gameFormat.get(i)[j]).equals(cells[i][j].getText()))) {
+				if(!(String.valueOf(gameFormat.get(i)[j]).equalsIgnoreCase(cells[i][j].getText()))) {
 					return false;
 				}
 			}
