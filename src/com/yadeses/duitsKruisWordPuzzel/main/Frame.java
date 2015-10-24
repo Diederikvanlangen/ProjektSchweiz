@@ -1,25 +1,22 @@
 package com.yadeses.duitsKruisWordPuzzel.main;
 
-import java.awt.*;
+import java.awt.Graphics;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.GridBagLayout;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 
 import javax.swing.ImageIcon;
-import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JMenuBar;
-import javax.swing.JTextArea;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import javax.swing.text.AbstractDocument;
 import javax.swing.text.Document;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 
 public class Frame extends JFrame implements ActionListener {
 
@@ -29,9 +26,9 @@ public class Frame extends JFrame implements ActionListener {
 	public Frame() {
 		super("Puzzle");
 		
-		CharNumComb comb = new CharNumComb();
+		/*CharNumComb comb = new CharNumComb();
 		LinkedList<HashMap<String,String>> Words = App.readXML("test.xml");
-		gameFormat = App.genGame(Words);
+		gameFormat = App.genGame(Words);*/
 
 		setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
