@@ -34,15 +34,16 @@ public class Frame extends JFrame implements ActionListener{
 		JMenuBar bar = new JMenuBar();
 			
 		
-		JButton but1 = new JButton("Fang das spiel an");
+		JButton but1 = new JButton("Fang das Spiel an");
 		JButton but2 = new JButton("Kontrollieren");		
-		JTextArea text = new JTextArea();
-		
+		JTextField text = new JTextField("Umschreibungen");
+		text.setEditable(false);
 		Document doc = text.getDocument();
 		((AbstractDocument) doc).setDocumentFilter(new SizeDocumentFilter());
 		but1.addActionListener(this);
 		bar.add(but1);
 		bar.add(but2);
+		bar.add(text);
 		c.ipadx=30;
 		c.ipady=12;
 		JTextField cells[][] = new JTextField[20][20];
