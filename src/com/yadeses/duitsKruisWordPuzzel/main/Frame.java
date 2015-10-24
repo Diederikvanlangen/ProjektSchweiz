@@ -45,6 +45,7 @@ public class Frame extends JFrame implements ActionListener {
 		JButton but1 = new JButton("Erklärung");
 		but1.addActionListener(this);
 		JButton but2 = new JButton("Kontrollieren");
+		but2.addActionListener(this);
 		JTextField text = new JTextField("Umschreibungen");
 		text.setEditable(false);
 		Document doc = text.getDocument();
