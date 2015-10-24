@@ -53,11 +53,11 @@ public class App {
 	}
 
 	@SuppressWarnings("unchecked")
-	private static ArrayList<Object> genGame(LinkedList<HashMap<String, String>> data, int depth) {
+	private static ArrayList<char[]> genGame(LinkedList<HashMap<String, String>> data, int depth) {
 		depth += 1;
 		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data.clone();
 		Random random = new Random();
-		ArrayList<Object> game = new ArrayList<Object>();
+		ArrayList<char[]> game = new ArrayList<char[]>();
 
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
@@ -102,10 +102,10 @@ public class App {
 		return game;
 	}
 
-	public static ArrayList<Object> genGame(LinkedList<HashMap<String, String>> data) {
+	public static ArrayList<char[]> genGame(LinkedList<HashMap<String, String>> data) {
 		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data.clone();
 		Random random = new Random();
-		ArrayList<Object> game = new ArrayList<Object>();
+		ArrayList<char[]> game = new ArrayList<char[]>();
 
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
@@ -130,7 +130,7 @@ public class App {
 			}
 		}
 		if (game.size() < randomKey.length()) {
-			return (ArrayList<Object>) genGame(data, 0);
+			return (ArrayList<char[]>) genGame(data, 0);
 		}
 		while (game.size() < 13) {
 			HashMap<String, String> n = data2.get(random.nextInt(4));
