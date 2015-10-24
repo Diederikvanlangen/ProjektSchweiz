@@ -1,4 +1,5 @@
 package com.yadeses.duitsKruisWordPuzzel.main;
+
 import java.awt.*;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -17,59 +18,54 @@ import javax.swing.JTextArea;
 import javax.swing.text.AbstractDocument;
 import javax.swing.text.Document;
 
+public class Frame extends JFrame implements ActionListener {
 
-public class Frame extends JFrame implements ActionListener{
-	
 	private static final long serialVersionUID = 1L;
 	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-	
-	public Frame(){
+
+	public Frame() {
 		super("Puzzle");
-		XMLFormatReader xml = new XMLFormatReader();
 		List<Map<String, String>> Words = new ArrayList<Map<String, String>>(5);
-		Words = xml.readXML("test.xml");
-		
+		Words = App.readXML("test.xml");
+
 		setLayout(new GridBagLayout());
-	    GridBagConstraints c = new GridBagConstraints();				
+		GridBagConstraints c = new GridBagConstraints();
 		JMenuBar bar = new JMenuBar();
-			
-		
-		JButton but1 = new JButton("Fang das spiel an");
-		JButton but2 = new JButton("Kontrollieren");		
+
+		JButton but1 = new JButton("Fang das Spiel an");
+		JButton but2 = new JButton("Kontrollieren");
 		JTextArea text = new JTextArea();
-		
+
 		Document doc = text.getDocument();
 		((AbstractDocument) doc).setDocumentFilter(new SizeDocumentFilter());
 		but1.addActionListener(this);
 		bar.add(but1);
 		bar.add(but2);
-		c.ipadx=30;
-		c.ipady=12;
+		c.ipadx = 30;
+		c.ipady = 12;
 		JTextField cells[][] = new JTextField[20][20];
-		for(int i=0;i<20;i++){
-			c.gridx=i;
-			for(int j=0;j<20;j++){
-				c.gridy=j;
-			
-			cells[i][j]=  new JTextField();
-			add(cells[i][j],c);
-			((AbstractDocument) ((JTextField) cells[i][j]).getDocument())
-			.setDocumentFilter(new SizeDocumentFilter());
+		for (int i = 0; i < 20; i++) {
+			c.gridx = i;
+			for (int j = 0; j < 20; j++) {
+				c.gridy = j;
+				cells[i][j] = new JTextField();
+				add(cells[i][j], c);
+				((AbstractDocument) ((JTextField) cells[i][j]).getDocument())
+						.setDocumentFilter(new SizeDocumentFilter());
 			}
-		}		
-		
-		setSize(800,800);
+		}
+
+		setSize(800, 800);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setJMenuBar(bar);
 		setVisible(true);
 	}
 
-
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getActionCommand().equals("Fang das spiel an")){
+		if (e.getActionCommand().equals("Fang das Spiel an")) {
 			Game.startGame();
 		}
-		
+
 	}
 }

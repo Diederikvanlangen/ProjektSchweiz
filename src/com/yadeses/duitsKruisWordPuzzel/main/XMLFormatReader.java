@@ -15,32 +15,5 @@ import org.w3c.dom.NodeList;
 
 public class XMLFormatReader {
 
-	public static List<Map<String, String>> readXML(String fileName) {
-
-		List<Map<String, String>> words = new ArrayList<Map<String, String>>(5);
-		
-		for (int i = 0; i < 5; i++) {
-			words.add(new HashMap<String, String>());
-		}
-
-		try {
-
-			File file = new File(fileName);
-			Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(file);
-			NodeList nList = doc.getElementsByTagName("woord");
-
-			for (int i = 0; i < nList.getLength(); i++) {
-				Node nNode = nList.item(i);
-				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
-					Element word = (Element) nNode;
-					words.get(Integer.parseInt(word.getAttribute("id"))-1).put(word.getAttribute("naam"), word.getTextContent());
-					System.out.println(word.getAttribute("naam"));
-				}
-			}
-			
-		} catch (Exception e) {
-			e.printStackTrace(System.out);
-		}
-		return words;
-	}
+	
 }
