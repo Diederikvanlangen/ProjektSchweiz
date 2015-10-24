@@ -24,7 +24,7 @@ public class Frame extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	ArrayList<char[]> gameFormat;
-	
+	JTextField cells[][];
 	public Frame() {
 		super("Puzzle");
 		
@@ -47,12 +47,11 @@ public class Frame extends JFrame implements ActionListener {
 		text.setEditable(false);
 		Document doc = text.getDocument();
 		((AbstractDocument) doc).setDocumentFilter(new SizeDocumentFilter());
-
+		cells = new JTextField[13][20];
 		bar.add(but2);
 		bar.add(but1);
 		c.ipadx = 15;
-		c.ipady = 8;
-		JTextField cells[][] = new JTextField[20][20];
+		c.ipady = 8;		
 		for (int i = 0; i < 13; i++) {
 			c.gridx = 0;
 			c.gridy = 13 + i;
@@ -67,7 +66,7 @@ public class Frame extends JFrame implements ActionListener {
 			System.out.println(i + " " + new String((char[])gameFormat.get(i)));
 			for (int j = 0; j < ((char[])gameFormat.get(i)).length; j++) {
 				c.gridx = j + 1;
-				ImageIcon imageIcon = new ImageIcon("Recources/1.gif");
+				ImageIcon imageIcon = new ImageIcon("Recources/" + comb.combination.indexOf(((char[])gameFormat.get(i))[j])+".gif");
 				cells[i][j] = new JTextField() {
 					Image image = imageIcon.getImage();
 
