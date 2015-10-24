@@ -17,7 +17,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JTextArea;
 import javax.swing.text.AbstractDocument;
 import javax.swing.text.Document;
-
+import javax.swing.JLabel;
 public class Frame extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
@@ -33,41 +33,56 @@ public class Frame extends JFrame implements ActionListener {
 		GridBagConstraints c = new GridBagConstraints();
 		JMenuBar bar = new JMenuBar();
 
-		JButton but1 = new JButton("Fang das Spiel an");
+		
 		JButton but2 = new JButton("Kontrollieren");
 		JTextField text = new JTextField("Umschreibungen");
 		text.setEditable(false);
 		Document doc = text.getDocument();
 		((AbstractDocument) doc).setDocumentFilter(new SizeDocumentFilter());
-		but1.addActionListener(this);
-		bar.add(but1);
-		bar.add(but2);
-		bar.add(text);
+		
+		bar.add(but2);		
 		c.ipadx = 30;
 		c.ipady = 12;
 		JTextField cells[][] = new JTextField[20][20];
-		for (int i = 0; i < 20; i++) {
-			c.gridx = i;
+		for (int i = 0; i < 12; i++) {
+			c.gridx = 0;
+			c.gridy = 20+i;
+			String getal = "" + (i+1);
+			JLabel o = new JLabel(getal);			
+			add(o,c);
 			for (int j = 0; j < 20; j++) {
-				c.gridy = j;
+				c.gridx = j+1;
 				cells[i][j] = new JTextField();
 				add(cells[i][j], c);
 				((AbstractDocument) ((JTextField) cells[i][j]).getDocument())
 						.setDocumentFilter(new SizeDocumentFilter());
 			}
 		}
-
-		setSize(800, 800);
+		JLabel Umschreibungen = new JLabel("Umschreibungen");
+		c.gridy=0;
+		c.gridx=10;
+		c.gridwidth=4;			
+		add(Umschreibungen,c);
+		
+		for(int i=0;i<12;i++){
+			String getal = "" + (i+1);
+			JLabel omschrijving = new JLabel(getal + ". ");
+			c.gridwidth=1;
+			c.gridx=0;
+			c.gridy=i+1;
+			c.ipady = 12;
+			add(omschrijving,c);
+		}
+		setSize(800, 850);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setJMenuBar(bar);
 		setVisible(true);
 	}
+	
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getActionCommand().equals("Fang das Spiel an")) {
-			Game.startGame();
-		}
+		
 
 	}
 }
