@@ -25,11 +25,9 @@ public class Frame extends JFrame implements ActionListener {
 
 	public Frame() {
 		super("Puzzle");
-		
+
 		List<Map<String, String>> Words = new ArrayList<Map<String, String>>(5);
-
-
-				
+		Words = App.readXML("test.xml");
 
 		setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
@@ -52,7 +50,6 @@ public class Frame extends JFrame implements ActionListener {
 			c.gridx = i;
 			for (int j = 0; j < 20; j++) {
 				c.gridy = j;
-
 				cells[i][j] = new JTextField();
 				add(cells[i][j], c);
 				((AbstractDocument) ((JTextField) cells[i][j]).getDocument())
@@ -68,7 +65,7 @@ public class Frame extends JFrame implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getActionCommand().equals("Fang das spiel an")) {
+		if (e.getActionCommand().equals("Fang das Spiel an")) {
 			Game.startGame();
 		}
 
