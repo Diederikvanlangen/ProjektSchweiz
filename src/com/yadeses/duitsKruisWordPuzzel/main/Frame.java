@@ -8,9 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
-import javax.swing.JTextArea;
-import javax.swing.text.AbstractDocument;
-import javax.swing.text.Document;
+import javax.swing.JScrollPane;
 
 public class Frame extends JFrame implements ActionListener{
 
@@ -22,12 +20,11 @@ public class Frame extends JFrame implements ActionListener{
 		super("Puzzle");
 		JMenuBar bar = new JMenuBar();
 		JButton but1 = new JButton("Fang das spiel an");
-		JTextArea text = new JTextArea();
-		Document doc = text.getDocument();
-		((AbstractDocument) doc).setDocumentFilter(new SizeDocumentFilter());
+		//JScrollPane pane = new JScrollPane(new GameField());
 		but1.addActionListener(this);
 		bar.add(but1);
-		add(text);
+		//add(pane);
+		add(new GameField());
 		setSize(screenSize);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setJMenuBar(bar);
