@@ -23,9 +23,9 @@ public class App {
 		
 	}
 
-	public static ArrayList<HashMap<String, String>> readXML(String fileName) {
+	public static LinkedList<HashMap<String, String>> readXML(String fileName) {
 
-		ArrayList<HashMap<String, String>> words = new ArrayList<HashMap<String, String>>();
+		LinkedList<HashMap<String, String>> words = new LinkedList<HashMap<String, String>>();
 
 		for (int i = 0; i < 5; i++) {
 			words.add(new HashMap<String, String>());
@@ -54,9 +54,9 @@ public class App {
 	}
 
 	@SuppressWarnings("unchecked")
-	private static ArrayList<Object> genGame(List<HashMap<String, String>> data, int depth) {
+	private static ArrayList<Object> genGame(LinkedList<HashMap<String, String>> data, int depth) {
 		depth += 1;
-		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) ((LinkedList<HashMap<String, String>>) data).clone();
+		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data.clone();
 		Random random = new Random();
 		ArrayList<Object> game = new ArrayList<Object>();
 
@@ -101,8 +101,8 @@ public class App {
 		return game;
 	}
 
-	public static ArrayList<Object> genGame(List<HashMap<String, String>> data) {
-		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) ((LinkedList<HashMap<String, String>>) data).clone();
+	public static ArrayList<Object> genGame(LinkedList<HashMap<String, String>> data) {
+		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data.clone();
 		Random random = new Random();
 		ArrayList<Object> game = new ArrayList<Object>();
 
