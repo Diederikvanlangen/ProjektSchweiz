@@ -3,14 +3,12 @@ package com.yadeses.duitsKruisWordPuzzel.main;
 import java.util.ArrayList;
 import java.util.Random;
 
-
-
 public class CharNumComb {
 
-	public char[] combination;
+	public ArrayList<Character> combination;
 
 	public CharNumComb() {
-		combination = new char[30];
+		combination = new ArrayList();
 		char[] temp = "abcdefghijklmnopqrstuvwxyzäöüß".toCharArray();
 		ArrayList<Character> alphabet = new ArrayList<Character>();
 		for(char l: temp) {
@@ -18,7 +16,7 @@ public class CharNumComb {
 		}
 		Random random = new Random();
 		while (alphabet.size() > 0) {
-			combination[alphabet.size() - 1] = alphabet.remove(random.nextInt(alphabet.size()));
+			combination.add(alphabet.remove(random.nextInt(alphabet.size())));
 		}
 
 	}
