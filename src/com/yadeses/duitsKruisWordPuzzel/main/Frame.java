@@ -4,21 +4,17 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.GridBagLayout;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.print.DocFlavor.URL;
 import javax.swing.ImageIcon;
-import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenuBar;
 import javax.swing.JTextArea;
-import javax.swing.UIManager;
-import javax.swing.border.Border;
 import javax.swing.text.AbstractDocument;
 import javax.swing.text.Document;
 import javax.swing.JLabel;
@@ -27,18 +23,19 @@ import javax.swing.JOptionPane;
 public class Frame extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
-	Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-
+	ArrayList<HashMap<String, String>> Words;
+	
 	public Frame() {
 		super("Puzzle");
-		String Schlüsselwort = "Schweiz";
-		List<Map<String, String>> Words = new ArrayList<Map<String, String>>(5);
+		
+		CharNumComb comb = new CharNumComb();
 		Words = App.readXML("test.xml");
+		ArrayList<Object> gameFormat = App.genGame(Words);
 
 		setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
+		
 		JMenuBar bar = new JMenuBar();
-
 		JButton but1 = new JButton("Erklärung");
 		but1.addActionListener(this);
 		JButton but2 = new JButton("Kontrollieren");
@@ -49,9 +46,7 @@ public class Frame extends JFrame implements ActionListener {
 
 		bar.add(but2);
 		bar.add(but1);
-
 		c.ipadx = 15;
-
 		c.ipady = 8;
 		JTextField cells[][] = new JTextField[20][20];
 		for (int i = 0; i < 13; i++) {
@@ -67,7 +62,6 @@ public class Frame extends JFrame implements ActionListener {
 			add(o, c);
 			for (int j = 0; j < 20; j++) {
 				c.gridx = j + 1;
-
 				ImageIcon imageIcon = new ImageIcon("Recources/1.gif");
 				cells[i][j] = new JTextField() {
 					Image image = imageIcon.getImage();
@@ -84,7 +78,6 @@ public class Frame extends JFrame implements ActionListener {
 				((AbstractDocument) ((JTextField) cells[i][j]).getDocument())
 						.setDocumentFilter(new SizeDocumentFilter());
 				add(cells[i][j], c);
-
 
 			}
 		}
@@ -104,27 +97,21 @@ public class Frame extends JFrame implements ActionListener {
 			c.ipady = 12;
 			add(omschrijving, c);
 		}
-
 		setResizable(false);
-		
 		setSize(900, 900);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setJMenuBar(bar);
 		setVisible(true);
-
 		showErklärung();
-
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand() == "Erklärung") {
-
 			showErklärung();
 		}
 
 	}
-
 
 	private void showErklärung() {
 		JOptionPane.showMessageDialog(null,

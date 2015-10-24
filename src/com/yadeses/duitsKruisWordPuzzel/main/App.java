@@ -19,15 +19,13 @@ public class App {
 
 	public static void main(String[] args) {
 		
-		System.out.println(new charNumComb().combination);
 		Frame mainFrame = new Frame();
-		
 		
 	}
 
-	public static List<Map<String, String>> readXML(String fileName) {
+	public static ArrayList<HashMap<String, String>> readXML(String fileName) {
 
-		List<Map<String, String>> words = new LinkedList<Map<String, String>>();
+		ArrayList<HashMap<String, String>> words = new ArrayList<HashMap<String, String>>();
 
 		for (int i = 0; i < 5; i++) {
 			words.add(new HashMap<String, String>());
@@ -56,11 +54,11 @@ public class App {
 	}
 
 	@SuppressWarnings("unchecked")
-	private static List<Object> genGame(LinkedList<HashMap<String, String>> data, int depth) {
+	private static ArrayList<Object> genGame(List<HashMap<String, String>> data, int depth) {
 		depth += 1;
-		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data.clone();
+		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) ((LinkedList<HashMap<String, String>>) data).clone();
 		Random random = new Random();
-		List<Object> game = new ArrayList<Object>();
+		ArrayList<Object> game = new ArrayList<Object>();
 
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
@@ -103,10 +101,10 @@ public class App {
 		return game;
 	}
 
-	public static List<Object> genGame(LinkedList<HashMap<String, String>> data) {
-		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data.clone();
+	public static ArrayList<Object> genGame(List<HashMap<String, String>> data) {
+		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) ((LinkedList<HashMap<String, String>>) data).clone();
 		Random random = new Random();
-		List<Object> game = new ArrayList<Object>();
+		ArrayList<Object> game = new ArrayList<Object>();
 
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
@@ -132,7 +130,7 @@ public class App {
 			}
 		}
 		if (game.size() < randomKey.length()) {
-			return genGame(data, 0);
+			return (ArrayList<Object>) genGame(data, 0);
 		}
 		while (game.size() < 13) {
 			HashMap<String, String> n = data2.get(random.nextInt(4));
