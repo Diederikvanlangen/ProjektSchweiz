@@ -91,18 +91,24 @@ public class Frame extends JFrame implements ActionListener {
 
 		JLabel Umschreibungen = new JLabel("Umschreibungen");
 		c.gridy = 0;
-		c.gridx = 10;
-		c.gridwidth = 8;
+		c.gridx = 0;
+		c.gridwidth = 6;
 		add(Umschreibungen, c);
 
 		for (int i = 0; i < 12; i++) {
 			String getal = "" + (i + 1);
-			JLabel omschrijving = new JLabel(getal + ". " + hashmap.get(String.valueOf(gameFormat.get(i))));
+			JLabel omschrijvingk = new JLabel(getal + ". " );
+			JLabel omschrijving = new JLabel(hashmap.get(String.valueOf(gameFormat.get(i))));
 			c.gridwidth = 1;
 			c.gridx = 0;
 			c.gridy = i + 1;
 			c.ipady = 12;
+			add(omschrijvingk, c);
+			c.gridwidth = 13;
+			c.gridx = 1;
+			c.gridy = i + 1;
 			add(omschrijving, c);
+			
 		}
 		setResizable(false);
 		setSize(600, 900);
@@ -123,8 +129,8 @@ public class Frame extends JFrame implements ActionListener {
 	private void showErklärung() {
 		JOptionPane.showMessageDialog(null,
 				"" + "In diesem Spiel sollst du probieren das Schlüsselwort \n"
-						+ "von logisch Nachdenken zu raten. Dafür musst du erst \n"
-						+ "schwanzig Fragen beantworten, die sich handeln um die Schweiz.\n"
+						+ "von logisch Nachdenken zu raten. Dafür sollst du erst \n"
+						+ "zwölf Fragen beantworten, die sich handeln um die Schweiz.\n"
 						+ "Trag in jedes Feld einen Letter ein. Wenn in mehreren Felder\n"
 						+ "die selbe Zahlen sind, sollen in diese Felder auch die\n"
 						+ "selbe Letter gesezt werden. Wenn du alle Zahlen des \n"
