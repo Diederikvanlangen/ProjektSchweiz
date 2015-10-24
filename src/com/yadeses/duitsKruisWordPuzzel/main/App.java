@@ -67,7 +67,7 @@ public class App {
 
 		for (char c : keyChars) {
 			ArrayList<Integer> num = new ArrayList<Integer>();
-			for (int i = 0; i < 4; i++) {
+			for (int i = 0; i < 5; i++) {
 				num.add(i);
 			}
 			loop: while (num.size() != 0) {
@@ -102,12 +102,14 @@ public class App {
 		return game;
 	}
 
+	@SuppressWarnings("unchecked")
 	public static ArrayList<char[]> genGame(LinkedList<HashMap<String, String>> data) {
 		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data.clone();
 		Random random = new Random();
 		ArrayList<char[]> game = new ArrayList<char[]>();
 
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
+		System.out.println(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
 		data2.get(4).remove(randomKey);
 
@@ -115,7 +117,7 @@ public class App {
 
 		for (char c : keyChars) {
 			ArrayList<Integer> num = new ArrayList<Integer>();
-			for (int i = 0; i < 4; i++) {
+			for (int i = 0; i < 5; i++) {
 				num.add(i);
 			}
 			loop: while (num.size() != 0) {
