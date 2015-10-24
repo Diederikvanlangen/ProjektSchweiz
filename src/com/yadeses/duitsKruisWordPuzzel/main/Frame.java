@@ -28,7 +28,7 @@ public class Frame extends JFrame implements ActionListener {
 		XMLFormatReader xml = new XMLFormatReader();
 		List<Map<String, String>> Words = new ArrayList<Map<String, String>>(5);
 		Words = xml
-				.readXML("C:\\Users\\johan\\git\\ProjektSchweiz\\src\\com\\yadeses\\duitsKruisWordPuzzel\\main\\test.xml");
+				.readXML("test.xml");
 
 		setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
