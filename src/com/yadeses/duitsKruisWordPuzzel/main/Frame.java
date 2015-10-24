@@ -23,14 +23,14 @@ import javax.swing.JOptionPane;
 public class Frame extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
-	ArrayList<HashMap<String, String>> Words;
+	ArrayList<Object> gameFormat;
 	
 	public Frame() {
 		super("Puzzle");
 		
 		CharNumComb comb = new CharNumComb();
-		Words = App.readXML("test.xml");
-		ArrayList<Object> gameFormat = App.genGame(Words);
+		ArrayList<HashMap<String,String>> Words = App.readXML("test.xml");
+		gameFormat = App.genGame(Words);
 
 		setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
