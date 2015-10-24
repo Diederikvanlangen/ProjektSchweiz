@@ -129,11 +129,11 @@ public class Frame extends JFrame implements ActionListener {
 	private void showErklärung() {
 		JOptionPane.showMessageDialog(null,
 				"" + "In diesem Spiel sollst du probieren das Schlüsselwort \n"
-						+ "von logisch Nachdenken zu raten. Dafür sollst du erst \n"
+						+ "von logischem Nachdenken zu raten. Dafür sollst du erst \n"
 						+ "zwölf Fragen beantworten, die sich handeln um die Schweiz.\n"
-						+ "Trag in jedes Feld einen Letter ein. Wenn in mehreren Felder\n"
+						+ "Trag in jedes Feld einen Letter ein. Wenn in mehreren Feldern\n"
 						+ "die selbe Zahlen sind, sollen in diese Felder auch die\n"
-						+ "selbe Letter gesezt werden. Wenn du alle Zahlen des \n"
+						+ "selbe Letter gesetzt werden. Wenn du alle Zahlen des \n"
 						+ "Schlüsselworts weißt, kannst du es erfüllen und hast du\n" + "das Spiel gewonnen!",
 				"Spielerklärung", JOptionPane.PLAIN_MESSAGE);
 	}
