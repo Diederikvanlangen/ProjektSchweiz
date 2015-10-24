@@ -129,7 +129,7 @@ public class Frame extends JFrame implements ActionListener {
 	private void showErklärung() {
 		JOptionPane.showMessageDialog(null,
 				"" + "In diesem Spiel sollst du probieren das Schlüsselwort \n"
-						+ "von logisch nach zu denken zu raten. Dafür sollst du erst \n"
+						+ "von logisch nachzudenken zu raten. Dafür sollst du erst \n"
 						+ "zwölf Fragen beantworten, die sich handeln um die Schweiz.\n"
 						+ "Trag in jedes Feld einen Letter ein. Wenn in mehreren Feldern\n"
 						+ "die selbe Zahlen sind, sollen in diese Felder auch die\n"
