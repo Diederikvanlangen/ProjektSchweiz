@@ -49,7 +49,9 @@ public class Frame extends JFrame implements ActionListener {
 
 		bar.add(but2);
 		bar.add(but1);
-		c.ipadx = 20;
+
+		c.ipadx = 15;
+
 		c.ipady = 8;
 		JTextField cells[][] = new JTextField[20][20];
 		for (int i = 0; i < 13; i++) {
@@ -65,24 +67,24 @@ public class Frame extends JFrame implements ActionListener {
 			add(o, c);
 			for (int j = 0; j < 20; j++) {
 				c.gridx = j + 1;
-				cells[i][j] = new JTextField();
-				/*
-				cells[i][j].setOpaque( true );
-				JLabel label = new JLabel( new ImageIcon("1.gif") );
-				label.setLayout( new BorderLayout() );
-				label.add( cells[i][j]);
-				
-				
-				add(label, c);((AbstractDocument) ((JTextField) cells[i][j]).getDocument())
-				.setDocumentFilter(new SizeDocumentFilter());
-				*/
-				add(cells[i][j],c);
+
+				ImageIcon imageIcon = new ImageIcon("Recources/1.gif");
+				cells[i][j] = new JTextField() {
+					Image image = imageIcon.getImage();
+
+					{
+						setOpaque(false);
+					}
+
+					public void paintComponent(Graphics g) {
+						g.drawImage(image, 0, 0, this);
+						super.paintComponent(g);
+					}
+				};
 				((AbstractDocument) ((JTextField) cells[i][j]).getDocument())
-				.setDocumentFilter(new SizeDocumentFilter());
-				JLabel Q = new JLabel("1");
-				add(Q,c);
-				
-				
+						.setDocumentFilter(new SizeDocumentFilter());
+				add(cells[i][j], c);
+
 
 			}
 		}
@@ -103,42 +105,36 @@ public class Frame extends JFrame implements ActionListener {
 			add(omschrijving, c);
 		}
 
+		setResizable(false);
+		
 		setSize(900, 900);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setJMenuBar(bar);
 		setVisible(true);
-		JOptionPane
-				.showMessageDialog(
-						null,
-						""
-								+ "In diesem Spiel sollst du probieren das Schlüsselwort \n"
-								+ "von logisch Nachdenken zu raten. Dafür musst du erst \n"
-								+ "schwanzig Fragen beantworten, die sich handeln um die Schweiz.\n"
-								+ "Trag in jedes Feld einen Letter ein. Wenn in mehreren Felder\n"
-								+ "die selbe Zahlen sind, sollen in diese Felder auch die\n"
-								+ "selbe Letter gesezt werden. Wenn du alle Zahlen des \n"
-								+ "Schlüsselworts weißt, kannst du es erfüllen und hast du\n"
-								+ "das Spiel gewonnen!", "Spielerklärung",
-						JOptionPane.PLAIN_MESSAGE);
+
+		showErklärung();
+
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getActionCommand() == "Erklärung") {
-			JOptionPane
-					.showMessageDialog(
-							null,
-							""
-									+ "In diesem Spiel sollst du probieren das Schlüsselwort \n"
-									+ "von logisch Nachdenken zu raten. Dafür musst du erst \n"
-									+ "schwanzig Fragen beantworten, die sich handeln um die Schweiz.\n"
-									+ "Trag in jedes Feld einen Letter ein. Wenn in mehreren Felder\n"
-									+ "die selbe Zahlen sind, sollen in diese Felder auch die\n"
-									+ "selbe Letter gesezt werden. Wenn du alle Zahlen des \n"
-									+ "Schlüsselworts weißt, kannst du es erfüllen und hast du\n"
-									+ "das Spiel gewonnen!", "Spielerklärung",
-							JOptionPane.PLAIN_MESSAGE);
+
+			showErklärung();
 		}
 
+	}
+
+
+	private void showErklärung() {
+		JOptionPane.showMessageDialog(null,
+				"" + "In diesem Spiel sollst du probieren das Schlüsselwort \n"
+						+ "von logisch Nachdenken zu raten. Dafür musst du erst \n"
+						+ "schwanzig Fragen beantworten, die sich handeln um die Schweiz.\n"
+						+ "Trag in jedes Feld einen Letter ein. Wenn in mehreren Felder\n"
+						+ "die selbe Zahlen sind, sollen in diese Felder auch die\n"
+						+ "selbe Letter gesezt werden. Wenn du alle Zahlen des \n"
+						+ "Schlüsselworts weißt, kannst du es erfüllen und hast du\n" + "das Spiel gewonnen!",
+				"Spielerklärung", JOptionPane.PLAIN_MESSAGE);
 	}
 }
