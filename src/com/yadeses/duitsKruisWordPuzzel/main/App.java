@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Random;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -16,10 +15,11 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class App {
+	public static Frame mainFrame;
 
 	public static void main(String[] args) {
 
-		Frame mainFrame = new Frame();
+		mainFrame = new Frame();
 
 	}
 
@@ -88,7 +88,7 @@ public class App {
 				return genGame(data, depth);
 			}
 		}
-		while (game.size() < 13) {
+		while (game.size() < 12) {
 			HashMap<String, String> n = data2.get(random.nextInt(4));
 			List<String> keys2 = new ArrayList<String>(n.keySet());
 			if (keys2.size() > 0) {
@@ -98,7 +98,7 @@ public class App {
 			}
 		}
 		game.add(randomKey.toCharArray());
-		
+
 		return game;
 	}
 
@@ -109,7 +109,6 @@ public class App {
 		ArrayList<char[]> game = new ArrayList<char[]>();
 
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
-		System.out.println(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
 		data2.get(4).remove(randomKey);
 
@@ -134,7 +133,7 @@ public class App {
 		if (game.size() < randomKey.length()) {
 			return (ArrayList<char[]>) genGame(data, 0);
 		}
-		while (game.size() < 13) {
+		while (game.size() < 12) {
 			HashMap<String, String> n = data2.get(random.nextInt(4));
 			List<String> keys2 = new ArrayList<String>(n.keySet());
 			if (keys2.size() > 0) {
@@ -144,7 +143,7 @@ public class App {
 			}
 		}
 		game.add(randomKey.toCharArray());
-		
+
 		return game;
 	}
 

@@ -8,10 +8,10 @@ public class CharNumComb {
 	public ArrayList<Character> combination;
 
 	public CharNumComb() {
-		combination = new ArrayList();
+		combination = new ArrayList<Character>();
 		char[] temp = "abcdefghijklmnopqrstuvwxyzäöüß".toCharArray();
 		ArrayList<Character> alphabet = new ArrayList<Character>();
-		for(char l: temp) {
+		for (char l : temp) {
 			alphabet.add(l);
 		}
 		Random random = new Random();

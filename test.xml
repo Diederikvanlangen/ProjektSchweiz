@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <woorden>
-    <!-- moeilijkheid graad is id (1 <= id <= 5) -->
-    <!--<woord id="1" naam="schweiz">Ein neutrales Land in Europa</woord> -->
-    <woord id="1" naam="an">Ein neutrales Land in Europa</woord>
-    <woord id="2" naam="al">Ein neutrales Land in Europa</woord>
-    <woord id="3" naam="ag">Ein neutrales Land in Europa</woord>
-    <woord id="4" naam="ab">Ein neutrales Land in Europa</woord>
-    <woord id="1" naam="af">Ein neutrales Land in Europa</woord>
-    <woord id="2" naam="as">Ein neutrales Land in Europa</woord>
-    <woord id="3" naam="a">Ein neutrales Land in Europa</woord>
-    <woord id="1" naam="aa">Ein neutrales Land in Europa</woord>
-    <woord id="2" naam="aaa">Ein neutrales Land in Europa</woord>
-    <woord id="3" naam="aaaa">Ein neutrales Land in Europa</woord>
-    <woord id="4" naam="aaaaa">Ein neutrales Land in Europa</woord>
-    <woord id="1" naam="aaaaaa">Ein neutrales Land in Europa</woord>
-    <woord id="2" naam="aaaaaaa">Ein neutrales Land in Europa</woord>
-    <woord id="3" naam="aaaaaaaa">Ein neutrales Land in Europa</woord>
-    <woord id="4" naam="aaaaaaaaa">Ein neutrales Land in Europa</woord>
-    <woord id="5" naam="aaaaaaaaaa">Ein neutrales Land in Europa</woord>
+	<!-- moeilijkheid graad is id (1 <= id <= 5) -->
+	<!--<woord id="1" naam="schweiz">Ein neutrales Land in Europa</woord> -->
+	<woord id="1" naam="an">Ein neutrales Land in Europa</woord>
+	<woord id="2" naam="al">Ein neutrales Land in Europa</woord>
+	<woord id="3" naam="ag">Ein neutrales Land in Europa</woord>
+	<woord id="4" naam="ab">Ein neutrales Land in Europa</woord>
+	<woord id="1" naam="af">Ein neutrales Land in Europa</woord>
+	<woord id="2" naam="as">Ein neutrales Land in Europa</woord>
+	<woord id="3" naam="a">Ein neutrales Land in Europa</woord>
+	<woord id="1" naam="aa">Ein neutrales Land in Europa</woord>
+	<woord id="2" naam="aaa">Ein neutrales Land in Europa</woord>
+	<woord id="3" naam="aaaa">Ein neutrales Land in Europa</woord>
+	<woord id="4" naam="aaaaa">Ein neutrales Land in Europa</woord>
+	<woord id="1" naam="aaaaaa">Ein neutrales Land in Europa</woord>
+	<woord id="2" naam="aaaaaaa">Ein neutrales Land in Europa</woord>
+	<woord id="3" naam="aaaaaaaa">Ein neutrales Land in Europa</woord>
+	<woord id="4" naam="aaaaaaaaa">Ein neutrales Land in Europa</woord>
+	<woord id="5" naam="aaaaaaaaaa">Ein neutrales Land in Europa</woord>
 </woorden>

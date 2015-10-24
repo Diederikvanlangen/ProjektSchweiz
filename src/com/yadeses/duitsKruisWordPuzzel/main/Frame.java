@@ -25,20 +25,22 @@ public class Frame extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	ArrayList<char[]> gameFormat;
 	JTextField cells[][];
+
 	public Frame() {
 		super("Puzzle");
-		
+
 		CharNumComb comb = new CharNumComb();
-		LinkedList<HashMap<String,String>> Words = App.readXML("test.xml");
-		HashMap<String,String> hashmap = new HashMap<String,String>();
-		for(int i=0;i<Words.size();i++){
+		LinkedList<HashMap<String, String>> Words = App.readXML("test.xml");
+		HashMap<String, String> hashmap = new HashMap<String, String>();
+
+		for (int i = 0; i < Words.size(); i++) {
 			hashmap.putAll(Words.get(i));
 		}
-		gameFormat = App.genGame(Words);
 
+		gameFormat = App.genGame(Words);
 		setLayout(new GridBagLayout());
 		GridBagConstraints c = new GridBagConstraints();
-		
+
 		JMenuBar bar = new JMenuBar();
 		JButton but1 = new JButton("Erklärung");
 		but1.addActionListener(this);
@@ -51,7 +53,7 @@ public class Frame extends JFrame implements ActionListener {
 		bar.add(but2);
 		bar.add(but1);
 		c.ipadx = 15;
-		c.ipady = 8;		
+		c.ipady = 8;
 		for (int i = 0; i < 13; i++) {
 			c.gridx = 0;
 			c.gridy = 13 + i;
@@ -63,11 +65,12 @@ public class Frame extends JFrame implements ActionListener {
 				getal = "Schlüsselwort";
 			JLabel o = new JLabel(getal);
 			add(o, c);
-			System.out.println(i + " " + new String((char[])gameFormat.get(i)));
-			for (int j = 0; j < ((char[])gameFormat.get(i)).length; j++) {
+			for (int j = 0; j < ((char[]) gameFormat.get(i)).length; j++) {
 				c.gridx = j + 1;
-				ImageIcon imageIcon = new ImageIcon("Recources/" + comb.combination.indexOf(((char[])gameFormat.get(i))[j])+".gif");
+				ImageIcon imageIcon = new ImageIcon(
+						"Recources/" + comb.combination.indexOf(((char[]) gameFormat.get(i))[j]) + ".gif");
 				cells[i][j] = new JTextField() {
+					private static final long serialVersionUID = 1L;
 					Image image = imageIcon.getImage();
 
 					{
@@ -127,5 +130,10 @@ public class Frame extends JFrame implements ActionListener {
 						+ "selbe Letter gesezt werden. Wenn du alle Zahlen des \n"
 						+ "Schlüsselworts weißt, kannst du es erfüllen und hast du\n" + "das Spiel gewonnen!",
 				"Spielerklärung", JOptionPane.PLAIN_MESSAGE);
+	}
+
+	public void showError() {
+		JOptionPane.showMessageDialog(null, "Fehler! Bitte, starte die Applikation neu.", "Applikationfehler",
+				JOptionPane.PLAIN_MESSAGE);
 	}
 }
