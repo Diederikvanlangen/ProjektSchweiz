@@ -1,16 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <woorden>
-	<!-- moeilijkheid graad is id (1 <= id <= 5) woorden in categorie 5 zijn 
-		sleutel woorden, deze moeten letters lang zijn en geen gekke letters bevatten 
-		zoals q, x en andere die niet vaak voorkomen -->
+	<!-- De moeilijkheidsgraad is id (1 <= id <= 5). Woorden in categorie 5 
+		zijn sleutelwoorden. Deze moeten 10 t/m 12 letters lang zijn en geen gekke 
+		letters zoals q, x en andere die niet vaak voorkomen bevatten. -->
+	<woord id="3" naam="Bogen">Gebogener Stock mit Seil als Waffe.</woord>
+	<woord id="1" naam="Appel">An einem Baum wachsend Stück Obst in unter
+		anderem die Farbe gelb, grün und rot.</woord>
+	<woord id="1" naam="Kanton">Synonym von Bezirk.</woord>
+	<woord id="3" naam="Pfeil">Fliegendes, langes Projektil dass aus einer
+		Waffe komt.</woord>
+	<woord id="3" naam="Bevölkerung">Name für jeden Einwhoner.</woord>
+	<woord id="1" naam="Deutsch">Sprachen in das Land des östliche Nachbar.
+	</woord>
+	<woord id="2" naam="Französisch">Sprachen in das Land des südliche Nachbar des
+		euren südliche Nachbar.</woord>
+	<!--<woord id="5" naam="Italienisch">Sprachen in das Land der Pasten</woord>
+	<woord id="4" naam="Rätoromanisch">Kleinste Sprachen in die Schweiz</woord>
+	<woord id="3" naam="Sprachen">Kommunikationmöglichkeit welche weltweit
+		benutzt werde.</woord>
+	<woord id="5" naam="Armbanduhr">Kleine Objekt um einem Arm dass die Zeit nent.
+	</woord>
+	<woord id="3" naam="Berggipfel">Höchste Spitze einer steinernen Masse.</woord>
+	<woord id="2" naam="Schneeschaufel">Pflug um Schnee weg zu schieben.</woord>
+	<woord id="1" naam="Käsefondue">Untertauchen der Fetzen Essen in Käse.</woord>
+	<woord id="4" naam="Raclette">Ein Mahlzeit mit erwärmte Käse des ein halben
+		Stück Käse das gegesen werde mit zum Beispiel Kartoffeln.</woord>
+	<woord id="2" naam="Bankgeheimnis">Die Sicherheit des nicht-weitergeben der
+		Bankangelegenheiten.</woord>
+	<woord id="3" naam="Gemse">Ein meckernes Tier dass auf einen Berg lauft.
+	</woord>
+	<woord id="2" naam="Kuhglocke">Ein klingelner Stück in der Form des Becher,
+		wodurch Bergtieren gefunden werden könnten.</woord>
 	<woord id="1" naam="Schweiz">Ein neutrales Land in Europa</woord>
 	<woord id="2" naam="vier">Antal sprachen in der Schweiz</woord>
 	<woord id="5" naam="Bernhardiner">Bringt Alkohol im Name von dem guten Ziels
-	</woord>
+	</woord>-->
 	<woord id="4" naam="Alphorn">Bekanntesten Instrument der Schweiz</woord>
 	<woord id="3" naam="jodeln">Schmerzt das Meist an der Ohren in der Schweiz
 	</woord>
 	<woord id="2" naam="Bern">Hauptstadt der Schweiz</woord>
 	<woord id="5" naam="WilhelmTell">Der Bekanntesten gestorben Mann der Schweiz
 	</woord>
+	<woord id="5" naam="Jungfraujoch">Der höchste Bahnhof von Europa</woord>
 </woorden>

@@ -58,8 +58,12 @@ public class App {
 	private static ArrayList<char[]> genGame(
 			LinkedList<HashMap<String, String>> data, int depth) {
 		depth += 1;
-		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data
-				.clone();
+
+		LinkedList<HashMap<String, String>> data2 = new LinkedList<HashMap<String, String>>();
+		for(HashMap<String,String> element: data) {
+			data2.add((HashMap<String, String>) element.clone());
+		}
+
 		Random random = new Random();
 		ArrayList<char[]> game = new ArrayList<char[]>();
 
@@ -88,7 +92,7 @@ public class App {
 		}
 		if (game.size() < randomKey.length()) {
 			if (depth > 3) {
-				System.err.print("Error!");
+				Frame.showError();
 			} else {
 				return genGame(data, depth);
 			}
@@ -108,10 +112,15 @@ public class App {
 	}
 
 	@SuppressWarnings("unchecked")
-	public static ArrayList<char[]> genGame(
-			LinkedList<HashMap<String, String>> data) {
-		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data
-				.clone();
+
+	public static ArrayList<char[]> genGame(LinkedList<HashMap<String, String>> data) {
+		
+		LinkedList<HashMap<String, String>> data2 = new LinkedList<HashMap<String, String>>();
+		for(HashMap<String,String> element: data) {
+			data2.add((HashMap<String, String>) element.clone());
+		}
+		
+
 		Random random = new Random();
 		ArrayList<char[]> game = new ArrayList<char[]>();
 
