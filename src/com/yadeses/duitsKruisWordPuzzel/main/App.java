@@ -1,6 +1,6 @@
 package com.yadeses.duitsKruisWordPuzzel.main;
 
-import java.io.File;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -24,7 +24,7 @@ public class App {
 
 	}
 
-	public static LinkedList<HashMap<String, String>> readXML(String fileName) {
+	public static LinkedList<HashMap<String, String>> readXML(InputStream inputStream) {
 
 		LinkedList<HashMap<String, String>> words = new LinkedList<HashMap<String, String>>();
 
@@ -34,8 +34,8 @@ public class App {
 
 		try {
 
-			File file = new File(fileName);
-			Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(file);
+			//File file = new File(inputStream);
+			Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(inputStream);
 			NodeList nList = doc.getElementsByTagName("woord");
 
 			for (int i = 0; i < nList.getLength(); i++) {
