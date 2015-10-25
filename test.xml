@@ -3,31 +3,28 @@
 	<!-- De moeilijkheidsgraad is id (1 <= id <= 5). Woorden in categorie 5 
 		zijn sleutelwoorden. Deze moeten 10 t/m 12 letters lang zijn en geen gekke 
 		letters zoals q, x en andere die niet vaak voorkomen bevatten. -->
-	<woord id="3" naam="bogen">Gebogener Stock mit Seil als Waffe.</woord>
-	<woord id="1" naam="appel">An einem Baum wachsend Stück Obst in unter
-		anderem die Farbe gelb, grün und rot.</woord>
+	<woord id="3" naam="bogen">Das Waffe von Wilhelm Tell.</woord>
+	<woord id="1" naam="appel">Wilhelm Tell schießt das von dem Kopf seiner Sohns.</woord>
 	<woord id="1" naam="kanton">Synonym von Bezirk.</woord>
-	<woord id="3" naam="pfeil">Fliegendes, langes Projektil dass aus einer
-		Waffe komt.</woord>
-	<woord id="3" naam="bevölkerung">Name für jeden Einwhoner.</woord>
-	<woord id="1" naam="deutsch">Sprachen in das Land des östliche Nachbar.
+	<woord id="3" naam="pfeil">Ein bogen und ...?</woord>
+	<woord id="3" naam="bevölkerung">Name für allen Einwohner der Lands.</woord>
+	<woord id="1" naam="deutsch">Sprache in dem Land des östlichen und nördlichen Nachbar der Schweiz.
 	</woord>
-	<woord id="2" naam="französisch">Sprachen in das Land des südliche Nachbar des
-		euren südliche Nachbar.</woord>
-	<woord id="5" naam="italienisch">Sprachen in das Land der Pasten</woord>
-	<woord id="4" naam="rätoromanisch">Kleinste Sprachen in die Schweiz</woord>
-	<woord id="3" naam="sprachen">Kommunikationmöglichkeit welche weltweit
+	<woord id="2" naam="französisch">Sprache in der westlichen Schweiz.</woord>
+	<woord id="5" naam="italienisch">Sprache in dem Land der Pasten und der Schweiz</woord>
+	<woord id="4" naam="rätoromanisch">Kleinste Sprache in der Schweiz</woord>
+	<woord id="3" naam="sprachen">Kommunikationmöglichkeit, die weltweit
 		benutzt werde.</woord>
-	<woord id="5" naam="armbanduhr">Kleine Objekt um einem Arm dass die Zeit nent.
+	<woord id="5" naam="armbanduhr">Klein Objekt um einen Arm, das die Zeit nent.
 	</woord>
 	<woord id="3" naam="berggipfel">Höchste Spitze einer steinernen Masse.</woord>
-	<woord id="2" naam="schneeschaufel">Pflug um Schnee weg zu schieben.</woord>
+	<woord id="2" naam="schneeschaufel">Ein Pflug um Schnee wegzuschieben.</woord>
 	<woord id="1" naam="käsefondue">Untertauchen der Fetzen Essen in Käse.</woord>
 	<woord id="4" naam="raclette">Ein Mahlzeit mit erwärmte Käse des ein halben
 		Stück Käse das gegesen werde mit zum Beispiel Kartoffeln.</woord>
 	<woord id="2" naam="bankgeheimnis">Die Sicherheit des nicht-weitergeben der
 		Bankangelegenheiten.</woord>
-	<woord id="3" naam="gemse">Ein meckernes Tier dass auf einen Berg lauft.
+	<woord id="3" naam="gemse">Ein meckernes Tier, das auf einem Berg lauft.
 	</woord>
 	<woord id="2" naam="kuhglocke">Ein klingelner Stück in der Form des Becher,
 		wodurch Bergtieren gefunden werden könnten.</woord>
@@ -36,10 +33,10 @@
 	<woord id="5" naam="bernhardiner">Bringt Alkohol im Name von dem guten Ziels
 	</woord>
 	<woord id="4" naam="alphorn">Bekanntesten Instrument der Schweiz</woord>
-	<woord id="3" naam="jodeln">Schmerzt das Meist an der Ohren in der Schweiz
+	<woord id="3" naam="jodeln">Schmerzt am Meisten an den Ohren in der Schweiz
 	</woord>
-	<woord id="2" naam="bern">Hauptstadt der Schweiz</woord>
-	<woord id="5" naam="wilhelmtell">Der Bekanntesten gestorben Mann der Schweiz
+	<woord id="2" naam="bern">Die Hauptstadt der Schweiz</woord>
+	<woord id="5" naam="wilhelmtell">Der Bekannteste gestorbe Mann der Schweiz
 	</woord>
 	<woord id="5" naam="jungfraujoch">Der höchste Bahnhof von Europa</woord>
 </woorden>
