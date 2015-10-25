@@ -197,15 +197,17 @@ public class Frame extends JFrame implements ActionListener {
 	}
 
 	private boolean checkAnswer() {
+		boolean b = true;
 		for (int i = 0; i < gameFormat.size(); i++) {
 			for (int j = 0; j < gameFormat.get(i).length; j++) {
 				if (!(String.valueOf(gameFormat.get(i)[j])
 						.equalsIgnoreCase(cells[i][j].getText()))) {
-					return false;
+					b = false;
+					cells[i][j].setText("");
 				}
 			}
 		}
-		return true;
+		return b;
 
 	}
 }
