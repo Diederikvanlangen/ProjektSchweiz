@@ -125,8 +125,9 @@ public class App {
 
 		Random random = new Random();
 		ArrayList<char[]> game = new ArrayList<char[]>();
-
+		
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
+		System.out.println(keys);
 		String randomKey = keys.get(random.nextInt(keys.size()));
 		data2.get(4).remove(randomKey);
 
