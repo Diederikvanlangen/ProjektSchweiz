@@ -3,50 +3,40 @@
 	<!-- De moeilijkheidsgraad is id (1 <= id <= 5). Woorden in categorie 5 
 		zijn sleutelwoorden. Deze moeten 10 t/m 12 letters lang zijn en geen gekke 
 		letters zoals q, x en andere die niet vaak voorkomen bevatten. -->
-	<woord id="3" naam="bogen">Die Waffe von Wilhelm Tell.</woord>
-	<woord id="1" naam="apfel">Wilhelm Tell schießt das von dem Kopf seines
-		Sohns.</woord>
+	<woord id="3" naam="bogen">Das Waffe von Wilhelm Tell.</woord>
+	<woord id="1" naam="appel">Wilhelm Tell schießt das von dem Kopf seiner Sohns.</woord>
 	<woord id="1" naam="kanton">Synonym von Bezirk.</woord>
-	<woord id="3" naam="pfeil">Ein Bogen und ...?</woord>
-	<woord id="3" naam="bevölkerung">Name für alle Einwohner des Lands.</woord>
-	<woord id="1" naam="deutsch">Sprache in dem Land der östlichen und
-		nördlichen Nachbarn der Schweiz.
+	<woord id="3" naam="pfeil">Ein bogen und ...?</woord>
+	<woord id="3" naam="bevölkerung">Name für allen Einwohner der Lands.</woord>
+	<woord id="1" naam="deutsch">Sprache in dem Land des östlichen und nördlichen Nachbar der Schweiz.
 	</woord>
-	<woord id="2" naam="französisch">Sprache in dem Westen der Schweiz.</woord>
-	<woord id="5" naam="italienisch">Sprache in dem Land der Paste und in der
-		Schweiz</woord>
+	<woord id="2" naam="französisch">Sprache in der westlichen Schweiz.</woord>
+	<woord id="5" naam="italienisch">Sprache in dem Land der Pasten und der Schweiz</woord>
 	<woord id="4" naam="rätoromanisch">Kleinste Sprache in der Schweiz</woord>
 	<woord id="3" naam="sprachen">Kommunikationmöglichkeit, die weltweit
-		benutzt wird.
+		benutzt werde.</woord>
+	<woord id="5" naam="armbanduhr">Klein Objekt um einen Arm, das die Zeit nent.
 	</woord>
-	<woord id="5" naam="armbanduhr">Klein Objekt um einen Arm, das die Zeit nennt.
-	</woord>
-	<woord id="3" naam="berggipfel">Höchste Spitze einer Steinmasse.</woord>
+	<woord id="3" naam="berggipfel">Höchste Spitze einer steinernen Masse.</woord>
 	<woord id="2" naam="schneeschaufel">Ein Pflug um Schnee wegzuschieben.</woord>
 	<woord id="1" naam="käsefondue">Untertauchen der Fetzen Essen in Käse.</woord>
-	<woord id="4" naam="raclette">Eine Mahlzeit mit erwärmte Käse eines halben
-		Stück Käse, das mit zum Beispiel Kartoffeln gegessen wird.
+	<woord id="4" naam="raclette">Ein Mahlzeit mit erwärmte Käse des ein halben
+		Stück Käse das gegesen werde mit zum Beispiel Kartoffeln.</woord>
+	<woord id="2" naam="bankgeheimnis">Die Sicherheit des nicht-weitergeben der
+		Bankangelegenheiten.</woord>
+	<woord id="3" naam="gemse">Ein meckernes Tier, das auf einem Berg lauft.
 	</woord>
-	<woord id="2" naam="bankgeheimnis">Die Sicherheit des Nicht-weitergeben der
-		Bankangelegenheiten.
-	</woord>
-	<woord id="3" naam="gemse">Ein meckerendes Tier, das auf einem Berg
-		läuft.
-	</woord>
-	<woord id="2" naam="kuhglocke">Ein klingelendes Stück in der Form eines
-		Bechers,
-		so dass Bergtieren gefunden werden könnten.
-	</woord>
+	<woord id="2" naam="kuhglocke">Ein klingelner Stück in der Form des Becher,
+		wodurch Bergtieren gefunden werden könnten.</woord>
 	<woord id="1" naam="schweiz">Ein neutrales Land in Europa</woord>
-	<woord id="2" naam="vier">Anzahl Sprachen in der Schweiz</woord>
-	<woord id="5" naam="bernhardiner">Bringt Alkohol im Name des guten Ziels.
+	<woord id="2" naam="vier">Antal sprachen in der Schweiz</woord>
+	<woord id="5" naam="bernhardiner">Bringt Alkohol im Name von dem guten Ziels
 	</woord>
-	<woord id="4" naam="alphorn">Bekanntestes Instrument der Schweiz</woord>
-	<woord id="3" naam="jodeln">Schmerzt am Meisten an den Ohren in der
-		Schweiz
+	<woord id="4" naam="alphorn">Bekanntesten Instrument der Schweiz</woord>
+	<woord id="3" naam="jodeln">Schmerzt am Meisten an den Ohren in der Schweiz
 	</woord>
 	<woord id="2" naam="bern">Die Hauptstadt der Schweiz</woord>
-	<woord id="5" naam="wilhelmtell">Der bekannteste gestorben Mann der Schweiz
+	<woord id="5" naam="wilhelmtell">Der Bekannteste gestorbe Mann der Schweiz
 	</woord>
-	<woord id="5" naam="jungfraujoch">Der höchste Bahnhof Europas</woord>
+	<woord id="5" naam="jungfraujoch">Der höchste Bahnhof von Europa</woord>
 </woorden>
