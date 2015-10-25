@@ -25,11 +25,14 @@ public class Frame extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	ArrayList<char[]> gameFormat;
 	JTextField cells[][];
-
-	public Frame() {
-		super("Puzzle");
-
+	int pogingen =1;
+	public static Frame mainFrame;
+	public Frame(int Q) {
+		super("Puzzle");		
 		CharNumComb comb = new CharNumComb();
+		for(int i = 0; i < comb.combination.size(); i++) {
+			System.out.println(i + ": " + comb.combination.get(i));
+		}
 		LinkedList<HashMap<String, String>> Words = App.readXML("test.xml");
 		HashMap<String, String> hashmap = new HashMap<String, String>();
 
@@ -45,6 +48,9 @@ public class Frame extends JFrame implements ActionListener {
 		JButton but1 = new JButton("Erklärung");
 		but1.addActionListener(this);
 		JButton but2 = new JButton("Kontrollieren");
+		but2.addActionListener(this);
+		JButton but3 = new JButton("Neu Spiel");
+		but3.addActionListener(this);
 		JTextField text = new JTextField("Umschreibungen");
 		text.setEditable(false);
 		Document doc = text.getDocument();
@@ -52,6 +58,7 @@ public class Frame extends JFrame implements ActionListener {
 		cells = new JTextField[13][20];
 		bar.add(but2);
 		bar.add(but1);
+		bar.add(but3);
 		c.ipadx = 15;
 		c.ipady = 8;
 		for (int i = 0; i < 13; i++) {
@@ -65,10 +72,11 @@ public class Frame extends JFrame implements ActionListener {
 				getal = "Schlüsselwort";
 			JLabel o = new JLabel(getal);
 			add(o, c);
+			System.out.println(gameFormat.get(i));
 			for (int j = 0; j < ((char[]) gameFormat.get(i)).length; j++) {
 				c.gridx = j + 1;
 				ImageIcon imageIcon = new ImageIcon(
-						"Recources/" + comb.combination.indexOf(((char[]) gameFormat.get(i))[j]) + ".gif");
+						"Recources/" + (comb.combination.indexOf(((char[]) gameFormat.get(i))[j]) + 1) + ".gif");
 				cells[i][j] = new JTextField() {
 					private static final long serialVersionUID = 1L;
 					Image image = imageIcon.getImage();
@@ -93,6 +101,7 @@ public class Frame extends JFrame implements ActionListener {
 		c.gridy = 0;
 		c.gridx = 0;
 		c.gridwidth = 6;
+		
 		add(Umschreibungen, c);
 
 		for (int i = 0; i < 12; i++) {
@@ -115,13 +124,31 @@ public class Frame extends JFrame implements ActionListener {
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setJMenuBar(bar);
 		setVisible(true);
-		showErklärung();
+		if(Q==0){
+		showErklärung();}
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getActionCommand() == "Erklärung") {
+		if (e.getActionCommand().equals("Erklärung")) {
 			showErklärung();
+		}
+		
+		if (e.getActionCommand().equals("Kontrollieren")) {
+			if (checkAnswer()==true){
+				JOptionPane.showMessageDialog(null,"Gratuliere, du hast das Spiel gewonnen in " + pogingen + " mal!","Gewonnen", JOptionPane.PLAIN_MESSAGE);
+			}
+			else{
+				JOptionPane.showMessageDialog(null, "Leider, versuch es noch einmal.\n"
+						+ "Du hast es "+pogingen+" mal probiert.","Noch nicht ganz richtig",JOptionPane.PLAIN_MESSAGE);
+				pogingen++;
+			}				
+		}
+		if(e.getActionCommand().equals("Neu Spiel")){
+			setVisible(false);
+			dispose();
+			mainFrame = new Frame(1);
+			
 		}
 
 	}
@@ -129,7 +156,7 @@ public class Frame extends JFrame implements ActionListener {
 	private void showErklärung() {
 		JOptionPane.showMessageDialog(null,
 				"" + "In diesem Spiel sollst du probieren das Schlüsselwort \n"
-						+ "von logisch nachzudenken zu raten. Dafür sollst du erst \n"
+						+ "durch logisch nachzudenken zu raten. Dafür sollst du erst \n"
 						+ "zwölf Fragen beantworten, die sich handeln um die Schweiz.\n"
 						+ "Trag in jedes Feld einen Letter ein. Wenn in mehreren Feldern\n"
 						+ "die selbe Zahlen sind, sollen in diese Felder auch die\n"
@@ -140,6 +167,18 @@ public class Frame extends JFrame implements ActionListener {
 
 	public void showError() {
 		JOptionPane.showMessageDialog(null, "Fehler! Bitte, starte die Applikation neu.", "Applikationfehler",
-				JOptionPane.PLAIN_MESSAGE);
+				JOptionPane.ERROR_MESSAGE);
+	}
+	
+	private boolean checkAnswer() {
+		for(int i = 0; i < gameFormat.size(); i++) {
+			for(int j = 0; j < gameFormat.get(i).length; j++) {
+				if(!(String.valueOf(gameFormat.get(i)[j]).equalsIgnoreCase(cells[i][j].getText()))) {
+					return false;
+				}
+			}
+		}
+		return true;
+		
 	}
 }

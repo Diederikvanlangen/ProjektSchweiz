@@ -19,7 +19,7 @@ public class App {
 
 	public static void main(String[] args) {
 
-		mainFrame = new Frame();
+		mainFrame = new Frame(0);
 
 	}
 
