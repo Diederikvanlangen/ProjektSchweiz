@@ -34,15 +34,17 @@ public class App {
 		try {
 
 			File file = new File(fileName);
-			Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(file);
+			Document doc = DocumentBuilderFactory.newInstance()
+					.newDocumentBuilder().parse(file);
 			NodeList nList = doc.getElementsByTagName("woord");
 
 			for (int i = 0; i < nList.getLength(); i++) {
 				Node nNode = nList.item(i);
 				if (nNode.getNodeType() == Node.ELEMENT_NODE) {
 					Element word = (Element) nNode;
-					words.get(Integer.parseInt(word.getAttribute("id")) - 1).put(word.getAttribute("naam"),
-							word.getTextContent());
+					words.get(Integer.parseInt(word.getAttribute("id")) - 1)
+							.put(word.getAttribute("naam"),
+									word.getTextContent());
 				}
 			}
 
@@ -53,12 +55,11 @@ public class App {
 	}
 
 	@SuppressWarnings("unchecked")
-	private static ArrayList<char[]> genGame(LinkedList<HashMap<String, String>> data, int depth) {
+	private static ArrayList<char[]> genGame(
+			LinkedList<HashMap<String, String>> data, int depth) {
 		depth += 1;
-		LinkedList<HashMap<String, String>> data2 = new LinkedList<HashMap<String, String>>();
-		for(HashMap<String,String> element: data) {
-			data2.add(element);
-		}
+		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data
+				.clone();
 		Random random = new Random();
 		ArrayList<char[]> game = new ArrayList<char[]>();
 
@@ -74,7 +75,8 @@ public class App {
 				num.add(i);
 			}
 			loop: while (num.size() != 0) {
-				HashMap<String, String> niveau = data2.get(num.remove(random.nextInt(num.size())));
+				HashMap<String, String> niveau = data2.get(num.remove(random
+						.nextInt(num.size())));
 				for (String s : niveau.keySet()) {
 					if (s.indexOf(c) != -1) {
 						game.add(s.toCharArray());
@@ -106,20 +108,17 @@ public class App {
 	}
 
 	@SuppressWarnings("unchecked")
-	public static ArrayList<char[]> genGame(LinkedList<HashMap<String, String>> data) {
-		
-		LinkedList<HashMap<String, String>> data2 = new LinkedList<HashMap<String, String>>();
-		for(HashMap<String,String> element: data) {
-			data2.add(element);
-		}
-		
+	public static ArrayList<char[]> genGame(
+			LinkedList<HashMap<String, String>> data) {
+		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data
+				.clone();
 		Random random = new Random();
 		ArrayList<char[]> game = new ArrayList<char[]>();
-		System.out.println(data2.get(4).keySet());
+
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
 		data2.get(4).remove(randomKey);
-		System.out.println(data2.get(4).keySet());
+
 		char[] keyChars = randomKey.toCharArray();
 
 		for (char c : keyChars) {
@@ -128,7 +127,8 @@ public class App {
 				num.add(i);
 			}
 			loop: while (num.size() != 0) {
-				HashMap<String, String> niveau = data2.get(num.remove(random.nextInt(num.size())));
+				HashMap<String, String> niveau = data2.get(num.remove(random
+						.nextInt(num.size())));
 				for (String s : niveau.keySet()) {
 					if (s.indexOf(c) != -1) {
 						game.add(s.toCharArray());
