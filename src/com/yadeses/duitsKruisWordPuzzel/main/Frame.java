@@ -167,7 +167,7 @@ public class Frame extends JFrame implements ActionListener {
 							null,"Die Letter Ä,Ü,Ö und ß werden zu eigene Letter gerechnet.\n"
 								+ "Gebrauch keine Zwischenraumen wenn eine Antwort aus zwei Wörter besteht.\n"
 								+ "Es ist egal ob du Majusklen gebraucht oder nicht.\n"
-								+ "ß: ctrl + alt + s"
+								+ "ß: ctrl + alt + s\n"
 								+ "Gebrauch das Netz wenn du etwas nicht weißt"
 							, "Tipps",
 							JOptionPane.PLAIN_MESSAGE);
