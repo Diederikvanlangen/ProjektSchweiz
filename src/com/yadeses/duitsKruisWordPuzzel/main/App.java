@@ -115,11 +115,9 @@ public class App {
 		
 		Random random = new Random();
 		ArrayList<char[]> game = new ArrayList<char[]>();
-		System.out.println(data2.get(4).keySet());
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
 		data2.get(4).remove(randomKey);
-		System.out.println(data2.get(4).keySet());
 		char[] keyChars = randomKey.toCharArray();
 
 		for (char c : keyChars) {

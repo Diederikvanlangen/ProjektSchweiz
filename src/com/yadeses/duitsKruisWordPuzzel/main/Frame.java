@@ -33,9 +33,6 @@ public class Frame extends JFrame implements ActionListener {
 	public Frame(int Q) {
 		super("Puzzle");
 		CharNumComb comb = new CharNumComb();
-		for (int i = 0; i < comb.combination.size(); i++) {
-			System.out.println(i + ": " + comb.combination.get(i));
-		}
 		LinkedList<HashMap<String, String>> Words = App.readXML("test.xml");
 		HashMap<String, String> hashmap = new HashMap<String, String>();
 
