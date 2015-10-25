@@ -121,7 +121,7 @@ public class Frame extends JFrame implements ActionListener {
 			c.gridy = i + 1;
 			c.ipady = 12;
 			add(omschrijvingk, c);
-			c.gridwidth = 13;
+			c.gridwidth = 20;
 			c.gridx = 1;
 			c.gridy = i + 1;
 			add(omschrijving, c);
