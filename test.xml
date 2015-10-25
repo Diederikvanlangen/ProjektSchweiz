@@ -3,43 +3,43 @@
 	<!-- De moeilijkheidsgraad is id (1 <= id <= 5). Woorden in categorie 5 
 		zijn sleutelwoorden. Deze moeten 10 t/m 12 letters lang zijn en geen gekke 
 		letters zoals q, x en andere die niet vaak voorkomen bevatten. -->
-	<woord id="3" naam="Bogen">Gebogener Stock mit Seil als Waffe.</woord>
-	<woord id="1" naam="Appel">An einem Baum wachsend Stück Obst in unter
+	<woord id="3" naam="bogen">Gebogener Stock mit Seil als Waffe.</woord>
+	<woord id="1" naam="appel">An einem Baum wachsend Stück Obst in unter
 		anderem die Farbe gelb, grün und rot.</woord>
-	<woord id="1" naam="Kanton">Synonym von Bezirk.</woord>
-	<woord id="3" naam="Pfeil">Fliegendes, langes Projektil dass aus einer
+	<woord id="1" naam="kanton">Synonym von Bezirk.</woord>
+	<woord id="3" naam="pfeil">Fliegendes, langes Projektil dass aus einer
 		Waffe komt.</woord>
-	<woord id="3" naam="Bevölkerung">Name für jeden Einwhoner.</woord>
-	<woord id="1" naam="Deutsch">Sprachen in das Land des östliche Nachbar.
+	<woord id="3" naam="bevölkerung">Name für jeden Einwhoner.</woord>
+	<woord id="1" naam="deutsch">Sprachen in das Land des östliche Nachbar.
 	</woord>
-	<woord id="2" naam="Französisch">Sprachen in das Land des südliche Nachbar des
+	<woord id="2" naam="französisch">Sprachen in das Land des südliche Nachbar des
 		euren südliche Nachbar.</woord>
-	<woord id="5" naam="Italienisch">Sprachen in das Land der Pasten</woord>
-	<woord id="4" naam="Rätoromanisch">Kleinste Sprachen in die Schweiz</woord>
-	<woord id="3" naam="Sprachen">Kommunikationmöglichkeit welche weltweit
+	<woord id="5" naam="italienisch">Sprachen in das Land der Pasten</woord>
+	<woord id="4" naam="rätoromanisch">Kleinste Sprachen in die Schweiz</woord>
+	<woord id="3" naam="sprachen">Kommunikationmöglichkeit welche weltweit
 		benutzt werde.</woord>
-	<woord id="5" naam="Armbanduhr">Kleine Objekt um einem Arm dass die Zeit nent.
+	<woord id="5" naam="armbanduhr">Kleine Objekt um einem Arm dass die Zeit nent.
 	</woord>
-	<woord id="3" naam="Berggipfel">Höchste Spitze einer steinernen Masse.</woord>
-	<woord id="2" naam="Schneeschaufel">Pflug um Schnee weg zu schieben.</woord>
-	<woord id="1" naam="Käsefondue">Untertauchen der Fetzen Essen in Käse.</woord>
-	<woord id="4" naam="Raclette">Ein Mahlzeit mit erwärmte Käse des ein halben
+	<woord id="3" naam="berggipfel">Höchste Spitze einer steinernen Masse.</woord>
+	<woord id="2" naam="schneeschaufel">Pflug um Schnee weg zu schieben.</woord>
+	<woord id="1" naam="käsefondue">Untertauchen der Fetzen Essen in Käse.</woord>
+	<woord id="4" naam="raclette">Ein Mahlzeit mit erwärmte Käse des ein halben
 		Stück Käse das gegesen werde mit zum Beispiel Kartoffeln.</woord>
-	<woord id="2" naam="Bankgeheimnis">Die Sicherheit des nicht-weitergeben der
+	<woord id="2" naam="bankgeheimnis">Die Sicherheit des nicht-weitergeben der
 		Bankangelegenheiten.</woord>
-	<woord id="3" naam="Gemse">Ein meckernes Tier dass auf einen Berg lauft.
+	<woord id="3" naam="gemse">Ein meckernes Tier dass auf einen Berg lauft.
 	</woord>
-	<woord id="2" naam="Kuhglocke">Ein klingelner Stück in der Form des Becher,
+	<woord id="2" naam="kuhglocke">Ein klingelner Stück in der Form des Becher,
 		wodurch Bergtieren gefunden werden könnten.</woord>
-	<woord id="1" naam="Schweiz">Ein neutrales Land in Europa</woord>
+	<woord id="1" naam="schweiz">Ein neutrales Land in Europa</woord>
 	<woord id="2" naam="vier">Antal sprachen in der Schweiz</woord>
-	<woord id="5" naam="Bernhardiner">Bringt Alkohol im Name von dem guten Ziels
+	<woord id="5" naam="bernhardiner">Bringt Alkohol im Name von dem guten Ziels
 	</woord>
-	<woord id="4" naam="Alphorn">Bekanntesten Instrument der Schweiz</woord>
+	<woord id="4" naam="alphorn">Bekanntesten Instrument der Schweiz</woord>
 	<woord id="3" naam="jodeln">Schmerzt das Meist an der Ohren in der Schweiz
 	</woord>
-	<woord id="2" naam="Bern">Hauptstadt der Schweiz</woord>
-	<woord id="5" naam="WilhelmTell">Der Bekanntesten gestorben Mann der Schweiz
+	<woord id="2" naam="bern">Hauptstadt der Schweiz</woord>
+	<woord id="5" naam="wilhelmtell">Der Bekanntesten gestorben Mann der Schweiz
 	</woord>
-	<woord id="5" naam="Jungfraujoch">Der höchste Bahnhof von Europa</woord>
+	<woord id="5" naam="jungfraujoch">Der höchste Bahnhof von Europa</woord>
 </woorden>
