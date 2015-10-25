@@ -194,7 +194,7 @@ public class Frame extends JFrame implements ActionListener {
 						JOptionPane.PLAIN_MESSAGE);
 	}
 
-	public void showError() {
+	public static void showError() {
 		JOptionPane.showMessageDialog(null,
 				"Fehler! Bitte, starte die Applikation neu.",
 				"Applikationfehler", JOptionPane.ERROR_MESSAGE);
