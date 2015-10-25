@@ -33,7 +33,7 @@ public class Frame extends JFrame implements ActionListener {
 	public Frame(int Q) {
 		super("Puzzle");
 		CharNumComb comb = new CharNumComb();
-		LinkedList<HashMap<String, String>> Words = App.readXML("test.xml");
+		LinkedList<HashMap<String, String>> Words = App.readXML(Frame.class.getResourceAsStream("res/test.xml"));
 		HashMap<String, String> hashmap = new HashMap<String, String>();
 
 		for (int i = 0; i < Words.size(); i++) {
@@ -78,11 +78,11 @@ public class Frame extends JFrame implements ActionListener {
 			add(o, c);
 			for (int j = 0; j < ((char[]) gameFormat.get(i)).length; j++) {
 				c.gridx = j + 1;
-				ImageIcon imageIcon = new ImageIcon(
-						"Recources/"
+				final ImageIcon imageIcon = new ImageIcon(Frame.class.getResource(
+						"res/"
 								+ (comb.combination
 										.indexOf(((char[]) gameFormat.get(i))[j]) + 1)
-								+ ".gif");
+								+ ".gif"));
 				cells[i][j] = new JTextField() {
 					private static final long serialVersionUID = 1L;
 					Image image = imageIcon.getImage();
