@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <woorden>
-	<!-- moeilijkheid graad is id (1 <= id <= 5) -->
-	<!--<woord id="1" naam="schweiz">Ein neutrales Land in Europa</woord> -->
-	<woord id="1" naam="an">Ein neutrales Land in Europa</woord>
-	<woord id="2" naam="al">Ein neutrales Land in Europa</woord>
-	<woord id="3" naam="ag">Ein neutrales Land in Europa</woord>
-	<woord id="4" naam="ab">Ein neutrales Land in Europa</woord>
-	<woord id="1" naam="af">Ein neutrales Land in Europa</woord>
-	<woord id="2" naam="as">Ein neutrales Land in Europa</woord>
-	<woord id="3" naam="a">Ein neutrales Land in Europa</woord>
-	<woord id="1" naam="aa">Ein neutrales Land in Europa</woord>
-	<woord id="2" naam="aaa">Ein neutrales Land in Europa</woord>
-	<woord id="3" naam="aaaa">Ein neutrales Land in Europa</woord>
-	<woord id="4" naam="aaaaa">Ein neutrales Land in Europa</woord>
-	<woord id="1" naam="aaaaaa">Ein neutrales Land in Europa</woord>
-	<woord id="2" naam="aaaaaaa">Ein neutrales Land in Europa</woord>
-	<woord id="3" naam="aaaaaaaa">Ein neutrales Land in Europa</woord>
-	<woord id="4" naam="aaaaaaaaa">Ein neutrales Land in Europa</woord>
-	<woord id="5" naam="aaaaaaaaaa">Ein neutrales Land in Europa</woord>
+	<!-- moeilijkheid graad is id (1 <= id <= 5) woorden in categorie 5 zijn 
+		sleutel woorden, deze moeten letters lang zijn en geen gekke letters bevatten 
+		zoals q, x en andere die niet vaak voorkomen -->
+	<woord id="1" naam="Schweiz">Ein neutrales Land in Europa</woord>
+	<woord id="2" naam="vier">Antal sprachen in der Schweiz</woord>
+	<woord id="5" naam="Bernhardiner">Bringt Alkohol im Name von dem guten Ziels
+	</woord>
+	<woord id="4" naam="Alphorn">Bekanntesten Instrument der Schweiz</woord>
+	<woord id="3" naam="jodeln">Schmerzt das Meist an der Ohren in der Schweiz
+	</woord>
+	<woord id="2" naam="Bern">Hauptstadt der Schweiz</woord>
+	<woord id="5" naam="WilhelmTell">Der Bekanntesten gestorben Mann der Schweiz
+	</woord>
 </woorden>

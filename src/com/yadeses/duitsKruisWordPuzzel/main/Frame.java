@@ -25,7 +25,7 @@ public class Frame extends JFrame implements ActionListener {
 	private static final long serialVersionUID = 1L;
 	ArrayList<char[]> gameFormat;
 	JTextField cells[][];
-	int pogingen =1;
+	int pogingen = 0;
 	public static Frame mainFrame;
 	public Frame(int Q) {
 		super("Puzzle");		
@@ -135,13 +135,13 @@ public class Frame extends JFrame implements ActionListener {
 		}
 		
 		if (e.getActionCommand().equals("Kontrollieren")) {
+			pogingen++;
 			if (checkAnswer()==true){
 				JOptionPane.showMessageDialog(null,"Gratuliere, du hast das Spiel gewonnen in " + pogingen + " mal!","Gewonnen", JOptionPane.PLAIN_MESSAGE);
 			}
 			else{
 				JOptionPane.showMessageDialog(null, "Leider, versuch es noch einmal.\n"
 						+ "Du hast es "+pogingen+" mal probiert.","Noch nicht ganz richtig",JOptionPane.PLAIN_MESSAGE);
-				pogingen++;
 			}				
 		}
 		if(e.getActionCommand().equals("Neu Spiel")){
