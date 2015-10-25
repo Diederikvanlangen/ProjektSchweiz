@@ -55,7 +55,10 @@ public class App {
 	@SuppressWarnings("unchecked")
 	private static ArrayList<char[]> genGame(LinkedList<HashMap<String, String>> data, int depth) {
 		depth += 1;
-		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data.clone();
+		LinkedList<HashMap<String, String>> data2 = new LinkedList<HashMap<String, String>>();
+		for(HashMap<String,String> element: data) {
+			data2.add(element);
+		}
 		Random random = new Random();
 		ArrayList<char[]> game = new ArrayList<char[]>();
 
@@ -104,14 +107,19 @@ public class App {
 
 	@SuppressWarnings("unchecked")
 	public static ArrayList<char[]> genGame(LinkedList<HashMap<String, String>> data) {
-		LinkedList<HashMap<String, String>> data2 = (LinkedList<HashMap<String, String>>) data.clone();
+		
+		LinkedList<HashMap<String, String>> data2 = new LinkedList<HashMap<String, String>>();
+		for(HashMap<String,String> element: data) {
+			data2.add(element);
+		}
+		
 		Random random = new Random();
 		ArrayList<char[]> game = new ArrayList<char[]>();
-
+		System.out.println(data2.get(4).keySet());
 		List<String> keys = new ArrayList<String>(data2.get(4).keySet());
 		String randomKey = keys.get(random.nextInt(keys.size()));
 		data2.get(4).remove(randomKey);
-
+		System.out.println(data2.get(4).keySet());
 		char[] keyChars = randomKey.toCharArray();
 
 		for (char c : keyChars) {
