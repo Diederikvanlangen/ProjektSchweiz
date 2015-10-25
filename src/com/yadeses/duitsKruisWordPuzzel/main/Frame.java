@@ -76,7 +76,6 @@ public class Frame extends JFrame implements ActionListener {
 				getal = "Schlüsselwort";
 			JLabel o = new JLabel(getal);
 			add(o, c);
-			System.out.println(i + ": " + String.valueOf(gameFormat.get(i)));
 			for (int j = 0; j < ((char[]) gameFormat.get(i)).length; j++) {
 				c.gridx = j + 1;
 				ImageIcon imageIcon = new ImageIcon(
