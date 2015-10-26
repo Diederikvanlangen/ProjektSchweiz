@@ -33,8 +33,6 @@ public class App {
 		}
 
 		try {
-
-			//File file = new File(inputStream);
 			Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(inputStream);
 			NodeList nList = doc.getElementsByTagName("woord");
 
