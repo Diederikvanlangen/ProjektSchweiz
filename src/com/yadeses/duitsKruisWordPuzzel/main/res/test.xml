@@ -4,53 +4,69 @@
 		zijn sleutelwoorden. Deze moeten 10 t/m 12 letters lang zijn en geen gekke 
 		letters zoals q, x en andere die niet vaak voorkomen bevatten. -->
 	<woord id="3" naam="bogen">Die Waffe von Wilhelm Tell.</woord>
-	<woord id="1" naam="apfel">Wilhelm Tell schießt das von dem Kopf seines Sohns.</woord>
+	<woord id="1" naam="apfel">Wilhelm Tell schießt das von dem Kopf seines
+		Sohns.</woord>
 	<woord id="1" naam="kanton">Synonym von Bezirk.</woord>
 	<woord id="3" naam="pfeil">Ein Bogen und ...?</woord>
 	<woord id="3" naam="bevölkerung">Name für alle Einwohner des Lands.</woord>
-	<woord id="1" naam="deutsch">Sprache im Land der östlichen und nördlichen Nachbarn der Schweiz.</woord>
+	<woord id="1" naam="deutsch">Sprache im Land der östlichen und nördlichen
+		Nachbarn der Schweiz.</woord>
 	<woord id="2" naam="französisch">Sprache im Westen der Schweiz.</woord>
-	<woord id="5" naam="italienisch">Sprache im Land der Paste und in der Schweiz</woord>
+	<woord id="5" naam="italienisch">Sprache im Land der Paste und in der Schweiz
+	</woord>
 	<woord id="4" naam="rätoromanisch">Kleinste Sprache in der Schweiz</woord>
-	<woord id="3" naam="sprache">Kommunikationmöglichkeit, die weltweit benutzt wird.</woord>
-	<woord id="5" naam="armbanduhr">Kleines Objekt um einen Arm, das die Zeit nennt.</woord>
+	<woord id="3" naam="sprache">Kommunikationmöglichkeit, die weltweit benutzt
+		wird.</woord>
+	<woord id="5" naam="armbanduhr">Kleines Objekt um einen Arm, das die Zeit
+		nennt.</woord>
 	<woord id="3" naam="berggipfel">Höchste Spitze einer Steinmasse.</woord>
 	<woord id="2" naam="schneeschaufel">Ein Pflug um Schnee wegzuschieben.</woord>
 	<woord id="1" naam="käsefondue">Untertauchen der Fetzen Essen in Käse.</woord>
-	<woord id="4" naam="raclette">Eine Mahlzeit mit erwärmte Käse eines halben Stück Käse, das mit zum Beispiel Kartoffeln gegessen wird.</woord>
-	<woord id="2" naam="bankgeheimnis">Die Sicherheit des Nicht-weitergeben der Bankangelegenheiten.</woord>
-	<woord id="3" naam="gemse">Ein meckerndes Tier, das auf einem Berg läuft.</woord>
-	<woord id="2" naam="kuhglocke">Ein klingelendes Stück in der Form eines Bechers, so dass Bergtieren gefunden werden könnten.</woord>
+	<woord id="4" naam="raclette">Eine Mahlzeit mit erwärmte Käse eines halben
+		Stück Käse, das mit zum Beispiel Kartoffeln gegessen wird.</woord>
+	<woord id="2" naam="bankgeheimnis">Die Sicherheit des Nicht-weitergeben der
+		Bankangelegenheiten.</woord>
+	<woord id="3" naam="gemse">Ein meckerndes Tier, das auf einem Berg läuft.
+	</woord>
+	<woord id="2" naam="kuhglocke">Ein klingelendes Stück in der Form eines
+		Bechers, so dass Bergtieren gefunden werden könnten.</woord>
 	<woord id="1" naam="schweiz">Ein neutrales Land in Europa</woord>
 	<woord id="2" naam="vier">Anzahl Sprachen in der Schweiz</woord>
-	<woord id="5" naam="bernhardiner">Bringt Alkohol im Name des guten Ziels.</woord>
+	<woord id="5" naam="bernhardiner">Bringt Alkohol im Name des guten Ziels.
+	</woord>
 	<woord id="4" naam="alphorn">Bekanntestes Instrument der Schweiz</woord>
-	<woord id="3" naam="jodeln">Schmerzt am Meisten an den Ohren in der Schweiz</woord>
+	<woord id="3" naam="jodeln">Schmerzt am Meisten an den Ohren in der
+		Schweiz</woord>
 	<woord id="2" naam="bern">Die Hauptstadt der Schweiz</woord>
-	<woord id="5" naam="wilhelmtell">Der bekannteste gestorben Mann der Schweiz</woord>
+	<woord id="5" naam="wilhelmtell">Der bekannteste gestorben Mann der Schweiz
+	</woord>
 	<woord id="5" naam="jungfraujoch">Der höchste Bahnhof Europas</woord>
 	<woord id="3" naam="schweizersoldat">Der Beschützer der Vatikan.</woord>
 	<woord id="2" naam="katholizismus">Die gröste Religion der Schweiz.</woord>
-	<woord id="1" naam="acht" >Anzahl Einwohner der Schweiz in Millionen.</woord>
+	<woord id="1" naam="acht">Anzahl Einwohner der Schweiz in
+		Millionen.</woord>
 	<woord id="3" naam="schweizerfranken">Währung der Schweiz.</woord>
-	<woord id="2" naam="drahtseilbahn"> Damit geht unter anderem man mit den Skiern nach oben oder nach unten.</woord>
-	<woord id="4" naam="eszett">Das hat das Schweizerdeutsch nicht.</woord>
-	<woord id="1" naam="milka">Die lila Kuh.</woord>
+	<woord id="2" naam="drahtseilbahn"> Damit geht unter anderem man mit den Skiern
+		nach oben oder nach unten.</woord>
+	<woord id="1" naam="milka">Die lilafarbene Kuh.</woord>
 	<woord id="2" naam="matterhorn">Der Berg im Logo von Toblerone.</woord>
 	<woord id="3" naam="schweizerpsalm">Nationalhymne der Schweiz.</woord>
 	<woord id="4" naam="toblerone">Leckerste Schokolade der Schweiz.</woord>
 	<woord id="1" naam="skifahren">Ein Sport im Schnee.</woord>
 	<woord id="2" naam="monterosa">Der höchste Berg der Schweiz.</woord>
-	<woord id="4" naam="aletschgletscher">Der grösste und längste Gletscher der Alpen und Schweiz.</woord>
+	<woord id="4" naam="aletschgletscher">Der größte und längste Gletscher der Alpen und
+		der Schweiz.</woord>
 	<woord id="5" naam="umbrailpass">Der höchste Strassenpass der Schweiz.</woord>
 	<woord id="5" naam="unterwalden">Ein Urkanton der Schweiz.</woord>
 	<woord id="2" naam="schwyz">Ein Urkanton der Schweiz.</woord>
 	<woord id="1" naam="uri">Ein Urkanton der Schweiz.</woord>
 	<woord id="5" naam="appenzeller">Bekannteste Käse der Schweiz.</woord>
-	<woord id="2" naam="genf">Die Stadt vieler internationaler Organisationen.</woord>
+	<woord id="2" naam="genf">Die Stadt vieler internationaler
+		Organisationen.</woord>
 	<woord id="2" naam="cern">Die Teilchenphysik der Schweiz.</woord>
-	<woord id="3" naam="taschenmesser">Schweizerische geschliffenheit.</woord>
+	<woord id="3" naam="taschenmesser">Schweizerische Geschliffenheit.</woord>
 	<woord id="4" naam="murmeltier">Ein Nagetier der Schweiz, das pfeift.</woord>
 	<woord id="5" naam="rotehalbmond">Das islamische Rote Kreuz</woord>
-	<woord id="2" naam="züge">Reiten immer rechtzeitig, trotz des Schnee</woord>
+	<woord id="2" naam="züge">Reiten immer rechtzeitig, trotz des Schnees
+	</woord>
 </woorden>
